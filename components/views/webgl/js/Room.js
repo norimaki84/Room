@@ -1,6 +1,7 @@
 import * as THREE from "three";
-// import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 // import 'imports-loader?THREE=three!three/examples/js/loaders/OBJLoader.js';
+// import 'imports-loader?THREE=three!three/examples/js/loaders/GLTFLoader.js'
 import EventBus from "~/utils/event-bus";
 import CommonGL from "./CommonGL";
 
@@ -17,7 +18,7 @@ export default class Room {
    */
   init(){
 
-    // this.assetsLoad();
+    this.assetsLoad();
 
     // EventBus.$on("TRANSITION", this.onTransition.bind(this));
     //
@@ -50,11 +51,11 @@ export default class Room {
     //glTFの読み込み
     this.loader = new GLTFLoader();
 
-    // this.loader.load('../model/RoooLoom_v1.gltf',function(data){
-    //   let gltf = data;
-    //   let obj = gltf.scene;
-    //   CommonGL.scene.add(obj);
-    // });
+    this.loader.load('../model/RoooLoom_v1.gltf',function(data){
+      let gltf = data;
+      let obj = gltf.scene;
+      CommonGL.scene.add(obj);
+    });
   }
 
   /**

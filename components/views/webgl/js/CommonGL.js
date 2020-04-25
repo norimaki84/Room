@@ -87,6 +87,7 @@ class CommonGL {
     this.time.total += this.time.delta;
 
     this.renderer.render(this.scene, this.camera);
+    // this.renderer.gammaOutput = true;
   }
 
 }

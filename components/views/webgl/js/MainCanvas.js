@@ -17,7 +17,7 @@ export default class MainCanvas {
   init(){
     CommonGL.init(this.props.$canvas);
     // this.shape = new Shape();
-    // this.room = new Room();
+    this.room = new Room();
 
     window.addEventListener("resize", this.resize.bind(this));
 

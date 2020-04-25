@@ -1,6 +1,8 @@
 <template>
   <div>
-    <WebglCanvas></WebglCanvas>
+    <client-only>
+      <WebglCanvas></WebglCanvas>
+    </client-only>
     <nuxt />
     <Nav></Nav>
   </div>
