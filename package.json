@@ -1,0 +1,50 @@
+{
+  "name": "three_nuxt_template",
+  "version": "1.0.2",
+  "description": "",
+  "author": "Norikazu Teraguchi (https://github.com/Teraguchi0804)",
+  "private": true,
+  "scripts": {
+    "dev": "NUXT_HOST=0.0.0.0 NUXT_PORT=3333 nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore ."
+  },
+  "browserslist": [
+    "last 2 version",
+    "android >= 6.0",
+    "ie 11",
+    "ios >= 11"
+  ],
+  "config": {
+    "nuxt": {
+      "host": "localhost",
+      "port": "3000"
+    }
+  },
+  "dependencies": {
+    "cross-env": "^6.0.3",
+    "gsap": "^3.0.1",
+    "nuxt": "^2.9.2",
+    "nuxt-compress": "^1.1.0",
+    "raw-loader": "^4.0.0",
+    "three": "^0.115.0",
+    "vuex": "^3.1.2",
+    "vuex-router-sync": "^5.0.0",
+    "path": "^0.12.7",
+    "@nuxtjs/axios": "^5.3.6",
+    "@nuxtjs/pwa": "^3.0.0-0",
+    "@nuxtjs/dotenv": "^1.4.0"
+  },
+  "devDependencies": {
+    "@nuxtjs/eslint-config": "^2.0.0",
+    "@nuxtjs/eslint-module": "^1.0.0",
+    "@nuxtjs/style-resources": "^1.0.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^6.1.0",
+    "eslint-plugin-nuxt": ">=0.4.2",
+    "node-sass": "^4.13.0",
+    "sass-loader": "^8.0.0"
+  }
+}

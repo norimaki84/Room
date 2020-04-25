@@ -1,0 +1,48 @@
+/* Noto Sans Japanese */
+@font-face {
+  font-family: 'NotoSansCJKjp-Regular';
+  font-style: normal;
+  font-weight: 400;
+  src:
+    local("Noto Sans CJK JP Regular"),
+    url('/fonts/NotoSansCJKjp-Regular.woff2') format('woff2'),
+    url('/fonts/NotoSansCJKjp-Regular.woff') format('woff'),
+    url('/fonts/NotoSansCJKjp-Regular.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NotoSansCJKjp-Medium';
+  font-style: normal;
+  font-weight: 500;
+  src:
+    local("Noto Sans CJK JP Medium"),
+    url('/fonts/NotoSansCJKjp-Medium.woff2') format('woff2'),
+    url('/fonts/NotoSansCJKjp-Medium.woff') format('woff'),
+    url('/fonts/NotoSansCJKjp-Medium.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NotoSansCJKjp-Bold';
+  font-style: normal;
+  font-weight: 700;
+  src:
+    local("Noto Sans CJK JP Bold"),
+    url('/fonts/NotoSansCJKjp-Bold.woff2') format('woff2'),
+    url('/fonts/NotoSansCJKjp-Bold.woff') format('woff'),
+    url('/fonts/NotoSansCJKjp-Bold.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NotoSansCJKjp-Black';
+  font-style: normal;
+  font-weight: 900;
+  src:
+    local("Noto Sans CJK JP Black"),
+    url('/fonts/NotoSansCJKjp-Black.woff2') format('woff2'),
+    url('/fonts/NotoSansCJKjp-Black.woff') format('woff'),
+    url('/fonts/NotoSansCJKjp-Black.ttf') format('truetype');
+  font-display: swap;
+}

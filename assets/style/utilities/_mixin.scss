@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+//$corporateBlue : #52b4ff;
+//$opacity : 0.7;
+
+// font設定
+@mixin sansJpRegular {
+  font-family: 'NotoSansCJKjp-Regular', sans-serif;
+}
+
+@mixin sansJpMedium {
+  font-family: 'NotoSansCJKjp-Medium', sans-serif;
+}
+
+@mixin sansJpBold {
+  font-family: 'NotoSansCJKjp-Bold', sans-serif;
+}
+
+@mixin sansJpBlack {
+  font-family: 'NotoSansCJKjp-Black', sans-serif;
+}
+
+// letter-spacing設定
+@mixin tracking($value) {
+  letter-spacing: ($value / 1000) + em;
+}
