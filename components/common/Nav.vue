@@ -28,7 +28,7 @@
 <style lang="scss" scoped>
   .nav{
     position: fixed;
-    top: 0;
+    top: 100px;
     left: 0;
     padding: 20px 30px;
     h1{

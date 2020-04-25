@@ -22,7 +22,7 @@
       if(!this.mainCanvas) this.mainCanvas = new MainCanvas({
         $canvas: this.$refs.canvas
       });
-      EventBus.$emit("TRANSITION", this.$route.name);
+      // EventBus.$emit("TRANSITION", this.$route.name);
     },
     watch: {
       "$route.name": function(_new, _old) {

@@ -9,10 +9,17 @@
 <script>
   import WebglCanvas from "~/components/views/webgl/WebglCanvas";
   import Nav from "~/components/common/Nav";
+
   export default {
     components: {
       WebglCanvas,
       Nav
+    },
+    mounted () {
+
+    },
+    methods: {
+
     }
   }
 </script>
