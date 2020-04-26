@@ -1,4 +1,7 @@
-import * as THREE from "three";
+import * as THREE from 'three/build/three.module.js';
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
+
+const Preset = { ASSET_GENERATOR: 'assetgenerator' };
 
 class CommonGL {
   constructor() {
@@ -12,6 +15,8 @@ class CommonGL {
     };
 
     this.clock = null;
+
+    this.controls = null;
 
     this.time = {
       total : null,
@@ -34,22 +39,28 @@ class CommonGL {
 
     this.scene = new THREE.Scene();
     this.camera = new THREE.PerspectiveCamera(
-      45,
+      50,
       this.size.windowWidth / this.size.windowHeight,
       0.1,
       10000
     );
-    this.camera.position.set(0, 10, -10);
+    // this.camera.position.set(0, 10, -10);
+    this.camera.position.set(400, 200, 300);
     this.camera.lookAt(this.scene.position);
 
     this.renderer = new THREE.WebGLRenderer({
       canvas: $canvas
     });
-
+    // this.renderer.physicallyCorrectLights = true;
+    // this.renderer.outputEncoding = new THREE.sRGBEncoding;
+    this.renderer.setClearColor(0xcccccc);
     this.renderer.setPixelRatio(window.devicePixelRatio);
-
-    this.renderer.setClearColor(0xEAF2F5);
     this.renderer.setSize(this.size.windowWidth, this.size.windowHeight);
+
+    this.controls = new OrbitControls(this.camera, this.renderer.domElement);
+
+    let light = new THREE.AmbientLight( 0xffffff ); // soft white light
+    this.scene.add( light );
 
     this.clock = new THREE.Clock();
     this.clock.start();
@@ -85,6 +96,8 @@ class CommonGL {
   _render() {
     this.time.delta = this.clock.getDelta();
     this.time.total += this.time.delta;
+
+    this.controls.update();
 
     this.renderer.render(this.scene, this.camera);
     // this.renderer.gammaOutput = true;

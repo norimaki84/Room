@@ -1,6 +1,6 @@
 import Stats from 'three/examples/jsm/libs/stats.module';
 import CommonGL from "./CommonGL";
-import Shape from "./Shape";
+// import Shape from "./Shape";
 import Room from './Room';
 
 export default class MainCanvas {

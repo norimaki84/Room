@@ -1,7 +1,6 @@
-import * as THREE from "three";
+import * as THREE from 'three/build/three.module.js';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
-// import 'imports-loader?THREE=three!three/examples/js/loaders/OBJLoader.js';
-// import 'imports-loader?THREE=three!three/examples/js/loaders/GLTFLoader.js'
+
 import EventBus from "~/utils/event-bus";
 import CommonGL from "./CommonGL";
 
@@ -65,19 +64,19 @@ export default class Room {
   onTransition(path){
     switch(path){
       case "index":
-        this.transitionTarget.set(1, 0, 0, 0);
+        // this.transitionTarget.set(1, 0, 0, 0);
         break;
 
       case "work":
-        this.transitionTarget.set(0, 1, 0, 0);
+        // this.transitionTarget.set(0, 1, 0, 0);
         break;
 
       case "service":
-        this.transitionTarget.set(0, 0, 1, 0);
+        // this.transitionTarget.set(0, 0, 1, 0);
         break;
 
       default:
-        this.transitionTarget.set(0, 0, 0, 1);
+        // this.transitionTarget.set(0, 0, 0, 1);
         break;
 
     }
