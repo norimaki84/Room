@@ -1,6 +1,6 @@
 {
   "name": "rooo-loom",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "author": "Norikazu Teraguchi (https://github.com/Teraguchi0804)",
   "private": true,
@@ -24,19 +24,20 @@
     }
   },
   "dependencies": {
+    "@nuxtjs/axios": "^5.3.6",
+    "@nuxtjs/dotenv": "^1.4.0",
+    "@nuxtjs/pwa": "^3.0.0-0",
+    "camera-controls": "^1.21.0",
     "cross-env": "^6.0.3",
     "dat.gui": "^0.7.7",
     "gsap": "^3.0.1",
     "nuxt": "^2.9.2",
     "nuxt-compress": "^1.1.0",
+    "path": "^0.12.7",
     "raw-loader": "^4.0.0",
     "three": "^0.115.0",
     "vuex": "^3.1.2",
-    "vuex-router-sync": "^5.0.0",
-    "path": "^0.12.7",
-    "@nuxtjs/axios": "^5.3.6",
-    "@nuxtjs/pwa": "^3.0.0-0",
-    "@nuxtjs/dotenv": "^1.4.0"
+    "vuex-router-sync": "^5.0.0"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^2.0.0",

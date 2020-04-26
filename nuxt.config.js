@@ -1,7 +1,7 @@
 const path = require('path');
 
 export default {
-  mode: 'universal',
+  mode: 'spa', // 'universal' or 'spa'
   /*
   ** Headers of the page
   */
@@ -40,6 +40,7 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    { src: '~/plugins/camera-controls.js', ssr: false }
   ],
   /*
   ** Nuxt.js dev-modules

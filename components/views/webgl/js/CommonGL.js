@@ -1,7 +1,9 @@
-import * as THREE from 'three/build/three.module.js';
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
+// import * as THREE from 'three/build/three.module.js';
+import * as THREE from "three";
+// import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
-const Preset = { ASSET_GENERATOR: 'assetgenerator' };
+import CameraControls from 'camera-controls';
+CameraControls.install( { THREE: THREE } );
 
 class CommonGL {
   constructor() {
@@ -16,7 +18,7 @@ class CommonGL {
 
     this.clock = null;
 
-    this.controls = null;
+    this.cameraControls = null;
 
     this.time = {
       total : null,
@@ -39,17 +41,21 @@ class CommonGL {
 
     this.scene = new THREE.Scene();
     this.camera = new THREE.PerspectiveCamera(
-      50,
+      60,
       this.size.windowWidth / this.size.windowHeight,
-      0.1,
-      10000
+      1.5,
+      30000
     );
     // this.camera.position.set(0, 10, -10);
-    this.camera.position.set(400, 200, 300);
-    this.camera.lookAt(this.scene.position);
+    this.camera.position.set(10, 100, 0);
+    // this.camera.position.set(0, 100, 0);
+    // this.camera.lookAt(this.scene.position);
+    // this.camera.lookAt(100, 100, 100);
 
     this.renderer = new THREE.WebGLRenderer({
-      canvas: $canvas
+      canvas: $canvas,
+      antialias: true,
+      stencil: false
     });
     // this.renderer.physicallyCorrectLights = true;
     // this.renderer.outputEncoding = new THREE.sRGBEncoding;
@@ -57,14 +63,25 @@ class CommonGL {
     this.renderer.setPixelRatio(window.devicePixelRatio);
     this.renderer.setSize(this.size.windowWidth, this.size.windowHeight);
 
-    this.controls = new OrbitControls(this.camera, this.renderer.domElement);
+    // this.cameraControls = new OrbitControls(this.camera, this.renderer.domElement);
+    this.cameraControls = new CameraControls( this.camera, this.renderer.domElement );
+
+
 
     let light = new THREE.AmbientLight( 0xffffff ); // soft white light
     this.scene.add( light );
 
+    let axes = new THREE.AxesHelper(300);
+    this.scene.add(axes);
+
     this.clock = new THREE.Clock();
     this.clock.start();
 
+
+    // setTimeout( ()=> {
+    //   console.log('camera move');
+    //   this.cameraControls.moveTo( 3, 200, 2, true );
+    // }, 3000);
   }
 
   /**
@@ -97,9 +114,14 @@ class CommonGL {
     this.time.delta = this.clock.getDelta();
     this.time.total += this.time.delta;
 
-    this.controls.update();
+    const hasControlsUpdated = this.cameraControls.update( this.time.delta );
+
+    // if ( hasControlsUpdated ) {
+    //   this.renderer.render(this.scene, this.camera);
+    // }
 
     this.renderer.render(this.scene, this.camera);
+
     // this.renderer.gammaOutput = true;
   }
 
