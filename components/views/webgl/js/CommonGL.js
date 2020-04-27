@@ -1,9 +1,8 @@
-// import * as THREE from 'three/build/three.module.js';
 import * as THREE from "three";
 // import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
-import CameraControls from 'camera-controls';
-CameraControls.install( { THREE: THREE } );
+import EventBus from "@/utils/event-bus";
+import CameraUtils from './CameraUtils';
 
 class CommonGL {
   constructor() {
@@ -15,9 +14,7 @@ class CommonGL {
       windowWidth : null,
       windowHeight : null
     };
-
     this.clock = null;
-
     this.cameraControls = null;
 
     this.time = {
@@ -47,7 +44,7 @@ class CommonGL {
       30000
     );
     // this.camera.position.set(0, 10, -10);
-    this.camera.position.set(10, 100, 0);
+    this.camera.position.set(0, 150, 0);
     // this.camera.position.set(0, 100, 0);
     // this.camera.lookAt(this.scene.position);
     // this.camera.lookAt(100, 100, 100);
@@ -63,10 +60,8 @@ class CommonGL {
     this.renderer.setPixelRatio(window.devicePixelRatio);
     this.renderer.setSize(this.size.windowWidth, this.size.windowHeight);
 
-    // this.cameraControls = new OrbitControls(this.camera, this.renderer.domElement);
-    this.cameraControls = new CameraControls( this.camera, this.renderer.domElement );
-
-
+    // CameraUtils初期化実行
+    this.cameraControls = new CameraUtils( this.camera, this.renderer.domElement );
 
     let light = new THREE.AmbientLight( 0xffffff ); // soft white light
     this.scene.add( light );
@@ -77,11 +72,6 @@ class CommonGL {
     this.clock = new THREE.Clock();
     this.clock.start();
 
-
-    // setTimeout( ()=> {
-    //   console.log('camera move');
-    //   this.cameraControls.moveTo( 3, 200, 2, true );
-    // }, 3000);
   }
 
   /**
@@ -100,6 +90,7 @@ class CommonGL {
    * @private
    */
   _onResize() {
+    console.log('onResize');
     this.setSize();
     this.camera.aspect = this.size.windowWidth / this.size.windowHeight;
     this.camera.updateProjectionMatrix();
@@ -114,14 +105,12 @@ class CommonGL {
     this.time.delta = this.clock.getDelta();
     this.time.total += this.time.delta;
 
-    const hasControlsUpdated = this.cameraControls.update( this.time.delta );
-
+    this.cameraControls.update( this.time.delta );
     // if ( hasControlsUpdated ) {
     //   this.renderer.render(this.scene, this.camera);
     // }
 
     this.renderer.render(this.scene, this.camera);
-
     // this.renderer.gammaOutput = true;
   }
 
