@@ -1,4 +1,5 @@
-const path = require('path');
+import path from 'path';
+import fs from 'fs';
 
 export default {
   mode: 'spa', // 'universal' or 'spa'
@@ -61,13 +62,13 @@ export default {
     '@nuxtjs/dotenv'
   ],
   manifest: {
-    name: "RoooLoom",
+    name: "Rooo Lou Exhibition「Room」",
     lang: 'ja-jp',
-    short_name: 'RoooLoom',
-    title: 'RoooLoom',
-    'og:title': 'RoooLoom',
-    description: 'RoooLoom',
-    'og:description': 'RoooLoom',
+    short_name: 'Room',
+    title: 'Rooo Lou Exhibition「Room」',
+    'og:title': 'Rooo Lou Exhibition「Room」',
+    description: 'Rooo Lou Exhibition「Room」',
+    'og:description': 'Rooo Lou Exhibition「Room」',
     theme_color: '#ffffff',
     background_color: '#ffffff',
     start_url: "/",
@@ -120,5 +121,21 @@ export default {
       '@': path.resolve(__dirname),
       '~': path.resolve(__dirname),
     },
+  },
+  server: {
+    https: {
+      key: fs.readFileSync(
+        path.resolve(
+          __dirname,
+          'server/localserver-key.pem'
+        )
+      ),
+      cert: fs.readFileSync(
+        path.resolve(__dirname, 'server/localserver.pem')
+      )
+    }
+  },
+  workbox: {
+    importScripts: ['main-sw.js']
   }
 }
