@@ -14,10 +14,10 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+    ],
+    script: [
+      { src: 'https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js' },
     ]
-    // script: [
-    //   { src: 'https://cdn.polyfill.io/v2/polyfill.min.js?features=default,fetch,Object.entries' },
-    // ]
   },
   /*
   ** Customize the progress-bar color
@@ -60,6 +60,22 @@ export default {
     // Doc: https://github.com/nuxt-community/dotenv-module
     '@nuxtjs/dotenv'
   ],
+  manifest: {
+    name: "RoooLoom",
+    lang: 'ja-jp',
+    short_name: 'RoooLoom',
+    title: 'RoooLoom',
+    'og:title': 'RoooLoom',
+    description: 'RoooLoom',
+    'og:description': 'RoooLoom',
+    theme_color: '#ffffff',
+    background_color: '#ffffff',
+    start_url: "/",
+    scope: "/",
+    display: "standalone",
+    orientation: "portrait-primary",
+    crossorigin: 'use-credentials'
+  },
   /*
   ** Axios module configuration
   ** See https://axios.nuxtjs.org/options

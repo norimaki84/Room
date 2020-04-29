@@ -1,10 +1,25 @@
 <template>
   <div class="container">
 <!--    <div class="buttonBox">-->
-<!--      <a rel='ar' href="/model/cup_saucer_set.usdz" >-->
+<!--      <a rel='ar' href="/model/rooo02.usdz" >-->
 <!--        <img src="~/assets/img/dog.jpg" alt="">-->
 <!--      </a>-->
 <!--    </div>-->
+
+<!--    <model-viewer-->
+<!--      ar-->
+<!--      ar-scale="fixed"-->
+<!--      alt=""-->
+<!--      src="/model/rooo01.glb"-->
+<!--      ios-src="/model/rooo01.usdz"-->
+
+<!--      background-color="#70BCD1"-->
+<!--      shadow-intensity="0.7"-->
+<!--      camera-controls-->
+<!--      interaction-prompt="auto"-->
+<!--      auto-rotate ar magic-leap-->
+<!--    >-->
+<!--    </model-viewer>-->
   </div>
 </template>
 
@@ -41,6 +56,15 @@ export default {
   .container {
     width: 100%;
     height: 100%;
+  }
+
+  model-viewer {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
   }
 
   .buttonBox {
