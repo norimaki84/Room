@@ -108,6 +108,14 @@ export default class Room {
         console.log("10");
         break;
 
+      case 'title':
+        console.log("title");
+        break;
+
+      case 'Door':
+        console.log("Door");
+        break;
+
       default:
         break;
     }

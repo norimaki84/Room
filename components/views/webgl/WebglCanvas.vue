@@ -22,12 +22,12 @@
       if(!this.mainCanvas) this.mainCanvas = new MainCanvas({
         $canvas: this.$refs.canvas
       });
-      // EventBus.$emit("TRANSITION", this.$route.name);
+
     },
     watch: {
       "$route.name": function(_new, _old) {
         // URLが変わるたびに発火
-        EventBus.$emit("TRANSITION", _new);
+        // EventBus.$emit("TRANSITION", _new);
       }
     },
     beforeDestroy() {

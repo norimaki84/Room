@@ -40,22 +40,17 @@ class CommonGL {
     this.camera = new THREE.PerspectiveCamera(
       60,
       this.size.windowWidth / this.size.windowHeight,
-      1.5,
+      1.5, // 1.5
       30000
     );
-    // this.camera.position.set(0, 10, -10);
-    this.camera.position.set(0, 150, 0);
-    // this.camera.position.set(0, 100, 0);
-    // this.camera.lookAt(this.scene.position);
-    // this.camera.lookAt(100, 100, 100);
 
+    const EPS = 1e-5;
+    this.camera.position.set(0, 0, EPS);
     this.renderer = new THREE.WebGLRenderer({
       canvas: $canvas,
       antialias: true,
       stencil: false
     });
-    // this.renderer.physicallyCorrectLights = true;
-    // this.renderer.outputEncoding = new THREE.sRGBEncoding;
     this.renderer.setClearColor(0xcccccc);
     this.renderer.setPixelRatio(window.devicePixelRatio);
     this.renderer.setSize(this.size.windowWidth, this.size.windowHeight);
