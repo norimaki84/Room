@@ -1,10 +1,5 @@
 <template>
   <div class="container">
-<!--    <div class="buttonBox">-->
-<!--      <a rel='ar' href="/model/rooo02.usdz" >-->
-<!--        <img src="~/assets/img/dog.jpg" alt="">-->
-<!--      </a>-->
-<!--    </div>-->
 
 <!--    <model-viewer-->
 <!--      ar-->
@@ -19,6 +14,8 @@
 <!--      interaction-prompt="auto"-->
 <!--      auto-rotate ar magic-leap>-->
 <!--    </model-viewer>-->
+
+    <DetailModal></DetailModal>
 
     <div class="buttonBox">
       <nav class="nav">
@@ -43,11 +40,11 @@
 
 <script>
   import EventBus from "~/utils/event-bus";
-  import Nav from '../components/common/Nav';
+  import DetailModal from '../components/common/DetailModal';
 
   export default {
     components: {
-      Nav
+      DetailModal
     },
     data() {
       return {
@@ -132,7 +129,11 @@
 <style lang="scss" scoped>
   .container {
     width: 100%;
-    height: 100%;
+    height: 100vh;
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
+    position: relative;
+    z-index: 10;
   }
 
   model-viewer {

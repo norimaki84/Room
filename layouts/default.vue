@@ -4,7 +4,7 @@
       <WebglCanvas></WebglCanvas>
     </client-only>
     <nuxt />
-    <Nav></Nav>
+<!--    <Nav></Nav>-->
   </div>
 </template>
 
@@ -15,7 +15,7 @@
   export default {
     components: {
       WebglCanvas,
-      Nav
+      // Nav
     },
     mounted () {
 

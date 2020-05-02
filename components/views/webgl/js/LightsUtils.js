@@ -183,7 +183,7 @@ export default class LightsUtils {
     let spotLightHelper11 = new THREE.SpotLightHelper( this.spotLight11 );
     CommonGL.scene.add( spotLightHelper11 );
 
-    this.buildGui();
+    // this.buildGui();
   }
 
   /**
