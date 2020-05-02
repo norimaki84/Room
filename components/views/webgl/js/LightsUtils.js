@@ -7,6 +7,7 @@ export default class LightsUtils {
   constructor() {
 
     this.gui = null;
+
     this.spotLight01 = null;
     this.spotLight02 = null;
     this.spotLight03 = null;
@@ -17,7 +18,10 @@ export default class LightsUtils {
     this.spotLight08 = null;
     this.spotLight09 = null;
     this.spotLight10 = null;
+    this.spotLight11 = null;
     this.spotLightHelper = null;
+
+    this.titleRectAreaLight = null;
 
     this.update = this._update.bind(this);
     this.init = this._init.bind(this);
@@ -166,7 +170,20 @@ export default class LightsUtils {
     this.spotLight10.shadow.camera.fov = 30;
     CommonGL.scene.add( this.spotLight10 );
 
-    // this.buildGui();
+    this.spotLight11 = new THREE.SpotLight( spotLightColor, 1.1, 2568, 0.27, 0.49, 1.6);
+    this.spotLight11.position.set( -354, -202, -550 );
+    this.spotLight11.target.position.set( 494, 200, 410 );
+    this.spotLight11.target.updateMatrixWorld();
+    this.spotLight11.shadow.mapSize.width = 1024;
+    this.spotLight11.shadow.mapSize.height = 1024;
+    this.spotLight11.shadow.camera.near = 500;
+    this.spotLight11.shadow.camera.far = 4000;
+    this.spotLight11.shadow.camera.fov = 30;
+    CommonGL.scene.add( this.spotLight11 );
+    let spotLightHelper11 = new THREE.SpotLightHelper( this.spotLight11 );
+    CommonGL.scene.add( spotLightHelper11 );
+
+    this.buildGui();
   }
 
   buildGui() {
@@ -174,60 +191,92 @@ export default class LightsUtils {
     this.gui = new dat.GUI();
 
     let params = {
-      'light color': this.spotLight09.color.getHex(),
-      positionX : this.spotLight09.position.x,
-      positionY : this.spotLight09.position.y,
-      positionZ : this.spotLight09.position.z,
-      intensity: this.spotLight09.intensity,
-      distance: this.spotLight09.distance,
-      angle: this.spotLight09.angle,
-      penumbra: this.spotLight09.penumbra,
-      decay: this.spotLight09.decay
+      'light color': this.spotLight11.color.getHex(),
+      positionX : this.spotLight11.position.x,
+      positionY : this.spotLight11.position.y,
+      positionZ : this.spotLight11.position.z,
+      intensity: this.spotLight11.intensity,
+      distance: this.spotLight11.distance,
+      angle: this.spotLight11.angle,
+      penumbra: this.spotLight11.penumbra,
+      decay: this.spotLight11.decay
     };
 
     this.gui.addColor( params, 'light color' ).onChange( function ( val ) {
-      _this.spotLight09.color.setHex( val );
+      _this.spotLight11.color.setHex( val );
       _this.update();
     } );
 
     this.gui.add( params, 'intensity', 0, 2 ).onChange( function ( val ) {
-      _this.spotLight09.intensity = val;
+      _this.spotLight11.intensity = val;
       _this.update();
     } );
     this.gui.add( params, 'positionX', -1000, 1000 ).onChange( function ( val ) {
-      _this.spotLight09.position.x = val;
+      _this.spotLight11.position.x = val;
       _this.update();
     } );
     this.gui.add( params, 'positionY', -1000, 1000 ).onChange( function ( val ) {
-      _this.spotLight09.position.y = val;
+      _this.spotLight11.position.y = val;
       _this.update();
     } );
 
     this.gui.add( params, 'positionZ', -1000, 1000 ).onChange( function ( val ) {
-      _this.spotLight09.position.z = val;
+      _this.spotLight11.position.z = val;
       _this.update();
     } );
 
 
     this.gui.add( params, 'distance', 50, 4000 ).onChange( function ( val ) {
-      _this.spotLight09.distance = val;
+      _this.spotLight11.distance = val;
       _this.update();
     } );
 
     this.gui.add( params, 'angle', 0, Math.PI / 3 ).onChange( function ( val ) {
-      _this.spotLight09.angle = val;
+      _this.spotLight11.angle = val;
       _this.update();
     } );
 
     this.gui.add( params, 'penumbra', 0, 1 ).onChange( function ( val ) {
-      _this.spotLight09.penumbra = val;
+      _this.spotLight11.penumbra = val;
       _this.update();
     } );
 
     this.gui.add( params, 'decay', 1, 2 ).onChange( function ( val ) {
-      _this.spotLight09.decay = val;
+      _this.spotLight11.decay = val;
       _this.update();
     } );
+
+    // this.gui.add( params, 'titleWidth', 0, 1000 ).onChange( function ( val ) {
+    //   _this.titleRectAreaLight.width = val;
+    //   _this.update();
+    // } );
+    //
+    // this.gui.add( params, 'titleHeight', 0, 1000 ).onChange( function ( val ) {
+    //   _this.titleRectAreaLight.height = val;
+    //   _this.update();
+    // } );
+    //
+    // this.gui.add( params, 'titleIntensity', 0, 1 ).onChange( function ( val ) {
+    //   _this.titleRectAreaLight.intensity = val;
+    //   _this.update();
+    // } );
+    //
+    // this.gui.add( params, 'titleX', 0, 1000 ).onChange( function ( val ) {
+    //   _this.titleRectAreaLight.position.x = val;
+    //   _this.update();
+    // } );
+    //
+    // this.gui.add( params, 'titleY', 0, 1000 ).onChange( function ( val ) {
+    //   _this.titleRectAreaLight.position.y = val;
+    //   _this.update();
+    // } );
+    //
+    // this.gui.add( params, 'titleZ', 0, 1000 ).onChange( function ( val ) {
+    //   _this.titleRectAreaLight.position.z = val;
+    //   _this.update();
+    // } );
+
+
     this.gui.open();
 
   }
