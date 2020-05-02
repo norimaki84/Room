@@ -186,6 +186,9 @@ export default class LightsUtils {
     this.buildGui();
   }
 
+  /**
+   * GUI実行
+   */
   buildGui() {
     let _this = this;
     this.gui = new dat.GUI();
@@ -205,78 +208,47 @@ export default class LightsUtils {
     this.gui.addColor( params, 'light color' ).onChange( function ( val ) {
       _this.spotLight11.color.setHex( val );
       _this.update();
-    } );
+    });
 
     this.gui.add( params, 'intensity', 0, 2 ).onChange( function ( val ) {
       _this.spotLight11.intensity = val;
       _this.update();
-    } );
+    });
+
     this.gui.add( params, 'positionX', -1000, 1000 ).onChange( function ( val ) {
       _this.spotLight11.position.x = val;
       _this.update();
-    } );
+    });
+
     this.gui.add( params, 'positionY', -1000, 1000 ).onChange( function ( val ) {
       _this.spotLight11.position.y = val;
       _this.update();
-    } );
+    });
 
     this.gui.add( params, 'positionZ', -1000, 1000 ).onChange( function ( val ) {
       _this.spotLight11.position.z = val;
       _this.update();
-    } );
-
+    });
 
     this.gui.add( params, 'distance', 50, 4000 ).onChange( function ( val ) {
       _this.spotLight11.distance = val;
       _this.update();
-    } );
+    });
 
     this.gui.add( params, 'angle', 0, Math.PI / 3 ).onChange( function ( val ) {
       _this.spotLight11.angle = val;
       _this.update();
-    } );
+    });
 
     this.gui.add( params, 'penumbra', 0, 1 ).onChange( function ( val ) {
       _this.spotLight11.penumbra = val;
       _this.update();
-    } );
+    });
 
     this.gui.add( params, 'decay', 1, 2 ).onChange( function ( val ) {
       _this.spotLight11.decay = val;
       _this.update();
-    } );
-
-    // this.gui.add( params, 'titleWidth', 0, 1000 ).onChange( function ( val ) {
-    //   _this.titleRectAreaLight.width = val;
-    //   _this.update();
-    // } );
-    //
-    // this.gui.add( params, 'titleHeight', 0, 1000 ).onChange( function ( val ) {
-    //   _this.titleRectAreaLight.height = val;
-    //   _this.update();
-    // } );
-    //
-    // this.gui.add( params, 'titleIntensity', 0, 1 ).onChange( function ( val ) {
-    //   _this.titleRectAreaLight.intensity = val;
-    //   _this.update();
-    // } );
-    //
-    // this.gui.add( params, 'titleX', 0, 1000 ).onChange( function ( val ) {
-    //   _this.titleRectAreaLight.position.x = val;
-    //   _this.update();
-    // } );
-    //
-    // this.gui.add( params, 'titleY', 0, 1000 ).onChange( function ( val ) {
-    //   _this.titleRectAreaLight.position.y = val;
-    //   _this.update();
-    // } );
-    //
-    // this.gui.add( params, 'titleZ', 0, 1000 ).onChange( function ( val ) {
-    //   _this.titleRectAreaLight.position.z = val;
-    //   _this.update();
-    // } );
-
-
+    });
     this.gui.open();
 
   }
