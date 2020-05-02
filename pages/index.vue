@@ -10,7 +10,7 @@
 <!--      ar-->
 <!--      ar-scale="fixed"-->
 <!--      alt="test"-->
-<!--      src="/model/rooo01.glb"-->
+<!--      src="/model/rooo02.gltf"-->
 <!--      ios-src="/model/rooo01.usdz"-->
 <!--      style="width:100%;height:100%;"-->
 <!--      background-color="#70BCD1"-->
