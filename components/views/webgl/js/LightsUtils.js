@@ -50,8 +50,8 @@ export default class LightsUtils {
     this.spotLight01.shadow.camera.far = 4000;
     this.spotLight01.shadow.camera.fov = 30;
     CommonGL.scene.add( this.spotLight01 );
-    let spotLightHelper01 = new THREE.SpotLightHelper( this.spotLight01 );
-    CommonGL.scene.add(  spotLightHelper01 );
+    // let spotLightHelper01 = new THREE.SpotLightHelper( this.spotLight01 );
+    // CommonGL.scene.add(  spotLightHelper01 );
 
     this.spotLight02 = new THREE.SpotLight( spotLightColor, 1.1, 1283, 0.35, 0.5, 1.6);
     this.spotLight02.position.set( -150, 383, 679 );
@@ -63,8 +63,8 @@ export default class LightsUtils {
     this.spotLight02.shadow.camera.far = 4000;
     this.spotLight02.shadow.camera.fov = 30;
     CommonGL.scene.add( this.spotLight02 );
-    let spotLightHelper02 = new THREE.SpotLightHelper( this.spotLight02 );
-    CommonGL.scene.add(  spotLightHelper02 );
+    // let spotLightHelper02 = new THREE.SpotLightHelper( this.spotLight02 );
+    // CommonGL.scene.add(  spotLightHelper02 );
 
     this.spotLight03 = new THREE.SpotLight( spotLightColor, 1.1, 1283, 0.35, 0.5, 1.6);
     this.spotLight03.position.set( -430, 383, 400 );
@@ -76,8 +76,8 @@ export default class LightsUtils {
     this.spotLight03.shadow.camera.far = 4000;
     this.spotLight03.shadow.camera.fov = 30;
     CommonGL.scene.add( this.spotLight03 );
-    let spotLightHelper03 = new THREE.SpotLightHelper( this.spotLight03 );
-    CommonGL.scene.add(  spotLightHelper03 );
+    // let spotLightHelper03 = new THREE.SpotLightHelper( this.spotLight03 );
+    // CommonGL.scene.add(  spotLightHelper03 );
 
     this.spotLight04 = new THREE.SpotLight( spotLightColor, 1.1, 1283, 0.35, 0.5, 1.6);
     this.spotLight04.position.set( -430, 383, 100 );
@@ -89,8 +89,8 @@ export default class LightsUtils {
     this.spotLight04.shadow.camera.far = 4000;
     this.spotLight04.shadow.camera.fov = 30;
     CommonGL.scene.add( this.spotLight04 );
-    let spotLightHelper04 = new THREE.SpotLightHelper( this.spotLight04 );
-    CommonGL.scene.add(  spotLightHelper04 );
+    // let spotLightHelper04 = new THREE.SpotLightHelper( this.spotLight04 );
+    // CommonGL.scene.add(  spotLightHelper04 );
 
     this.spotLight05 = new THREE.SpotLight( spotLightColor, 1.1, 1283, 0.35, 0.5, 1.6);
     this.spotLight05.position.set( -430, 383, -200 );
@@ -102,8 +102,8 @@ export default class LightsUtils {
     this.spotLight05.shadow.camera.far = 4000;
     this.spotLight05.shadow.camera.fov = 30;
     CommonGL.scene.add( this.spotLight05 );
-    let spotLightHelper05 = new THREE.SpotLightHelper( this.spotLight05 );
-    CommonGL.scene.add(  spotLightHelper05 );
+    // let spotLightHelper05 = new THREE.SpotLightHelper( this.spotLight05 );
+    // CommonGL.scene.add(  spotLightHelper05 );
 
 
     this.spotLight06 = new THREE.SpotLight( spotLightColor, 1.1, 1283, 0.35, 0.5, 1.6);
@@ -116,8 +116,8 @@ export default class LightsUtils {
     this.spotLight06.shadow.camera.far = 4000;
     this.spotLight06.shadow.camera.fov = 30;
     CommonGL.scene.add( this.spotLight06 );
-    let spotLightHelper06 = new THREE.SpotLightHelper( this.spotLight06 );
-    CommonGL.scene.add(  spotLightHelper06 );
+    // let spotLightHelper06 = new THREE.SpotLightHelper( this.spotLight06 );
+    // CommonGL.scene.add(  spotLightHelper06 );
 
     this.spotLight07 = new THREE.SpotLight( spotLightColor, 1.1, 1283, 0.35, 0.5, 1.6);
     this.spotLight07.position.set( -150, 383, -679 );
@@ -129,8 +129,8 @@ export default class LightsUtils {
     this.spotLight07.shadow.camera.far = 4000;
     this.spotLight07.shadow.camera.fov = 30;
     CommonGL.scene.add( this.spotLight07 );
-    let spotLightHelper07 = new THREE.SpotLightHelper( this.spotLight07 );
-    CommonGL.scene.add(  spotLightHelper07 );
+    // let spotLightHelper07 = new THREE.SpotLightHelper( this.spotLight07 );
+    // CommonGL.scene.add(  spotLightHelper07 );
 
 
     this.spotLight08 = new THREE.SpotLight( spotLightColor, 1.1, 1283, 0.35, 0.5, 1.6);
@@ -143,8 +143,8 @@ export default class LightsUtils {
     this.spotLight08.shadow.camera.far = 4000;
     this.spotLight08.shadow.camera.fov = 30;
     CommonGL.scene.add( this.spotLight08 );
-    let spotLightHelper08 = new THREE.SpotLightHelper( this.spotLight08 );
-    CommonGL.scene.add( spotLightHelper08 );
+    // let spotLightHelper08 = new THREE.SpotLightHelper( this.spotLight08 );
+    // CommonGL.scene.add( spotLightHelper08 );
 
     this.spotLight09 = new THREE.SpotLight( spotLightColor, 1.1, 1283, 0.27, 0.5, 1.6);
     this.spotLight09.position.set( 362, 557, -550 );
@@ -156,8 +156,8 @@ export default class LightsUtils {
     this.spotLight09.shadow.camera.far = 4000;
     this.spotLight09.shadow.camera.fov = 30;
     CommonGL.scene.add( this.spotLight09 );
-    this.spotLightHelper = new THREE.SpotLightHelper( this.spotLight09 );
-    CommonGL.scene.add( this.spotLightHelper );
+    // this.spotLightHelper = new THREE.SpotLightHelper( this.spotLight09 );
+    // CommonGL.scene.add( this.spotLightHelper );
 
     this.spotLight10 = new THREE.SpotLight( spotLightColor, 1.1, 1283, 0.27, 0.5, 1.6);
     this.spotLight10.position.set( 362, 557, -300 );
@@ -180,8 +180,8 @@ export default class LightsUtils {
     this.spotLight11.shadow.camera.far = 4000;
     this.spotLight11.shadow.camera.fov = 30;
     CommonGL.scene.add( this.spotLight11 );
-    let spotLightHelper11 = new THREE.SpotLightHelper( this.spotLight11 );
-    CommonGL.scene.add( spotLightHelper11 );
+    // let spotLightHelper11 = new THREE.SpotLightHelper( this.spotLight11 );
+    // CommonGL.scene.add( spotLightHelper11 );
 
     // this.buildGui();
   }
