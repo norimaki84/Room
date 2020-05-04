@@ -33,6 +33,8 @@
     "gsap": "^3.0.1",
     "nuxt": "^2.9.2",
     "nuxt-compress": "^1.1.0",
+    "nuxt-svg-loader": "^1.2.0",
+    "nuxt-user-agent": "^1.2.2",
     "path": "^0.12.7",
     "raw-loader": "^4.0.0",
     "three": "^0.115.0",
