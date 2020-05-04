@@ -2,20 +2,22 @@
   <div class="container">
 
     <model-viewer
+      id="reveal"
       ar
       ar-scale="fixed"
       alt="test"
       src="/model/rooo02.gltf"
       ios-src="/model/rooo01.usdz"
-      style="width:100%;height:100%;"
       background-color="#70BCD1"
       shadow-intensity="0.7"
+      quick-look-browsers="safari chrome"
       camera-controls
-      interaction-prompt="auto"
-      interaction-prompt-display="none"
-      auto-rotate ar magic-leap>
-      <button slot="ar-button" style="background-color: white; border-radius: 4px; border: none; position: absolute; top: 16px; right: 16px; ">
-        👋 Activate AR
+      model-visibility="false"
+      interaction-prompt="none"
+      reveal="manual"
+      ar magic-leap>
+      <button class="ar-button" slot="ar-button" style="border: none;">
+        <ArButton/>
       </button>
     </model-viewer>
 
@@ -27,10 +29,12 @@
 <script>
   import EventBus from "~/utils/event-bus";
   import DetailModal from '../components/common/DetailModal';
+  import ArButton from '@/assets/svg/ar.svg';
 
   export default {
     components: {
-      DetailModal
+      DetailModal,
+      ArButton
     },
     data() {
       return {
@@ -66,14 +70,33 @@
     z-index: 10;
   }
 
-  model-viewer {
+  model-viewer#reveal {
+    width: get-vw(100px);
+    height: get-vw(100px);
+    position: fixed;
+    bottom: get-vw(300px);
+    left: get-vw(100px);
+    z-index: 10000;
+    --poster-color: transparent;
+    --progress-bar-color: rgba(0, 0, 0, 0.0);
+  }
+
+  .ar-button {
     width: 100%;
     height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 10000;
-    background-color: orange;
+    border-radius: 50%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .fab {
+      width: get-vw(40px);
+      height: get-vw(40px);
+      svg {
+        width: 100%;
+        height: auto;
+      }
+    }
   }
 
 

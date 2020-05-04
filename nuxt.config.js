@@ -59,7 +59,9 @@ export default {
     '@nuxtjs/pwa',
     '@nuxtjs/style-resources',
     // Doc: https://github.com/nuxt-community/dotenv-module
-    '@nuxtjs/dotenv'
+    '@nuxtjs/dotenv',
+    'nuxt-svg-loader',
+    'nuxt-user-agent',
   ],
   manifest: {
     name: "Rooo Lou Exhibition「Room」",
