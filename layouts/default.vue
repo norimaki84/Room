@@ -5,23 +5,23 @@
     </client-only>
     <nuxt />
 <!--    <Nav></Nav>-->
-<!--    <div class="buttonBox">-->
-<!--      <nav class="nav">-->
-<!--        <li class="nav__item" @click="clickCanvas('1')">1</li>-->
-<!--        <li class="nav__item" @click="clickCanvas('2')">2</li>-->
-<!--        <li class="nav__item" @click="clickCanvas('3')">3</li>-->
-<!--        <li class="nav__item" @click="clickCanvas('4')">4</li>-->
-<!--        <li class="nav__item" @click="clickCanvas('5')">5</li>-->
-<!--        <li class="nav__item" @click="clickCanvas('6')">6</li>-->
-<!--        <li class="nav__item" @click="clickCanvas('7')">7</li>-->
-<!--        <li class="nav__item" @click="clickCanvas('8')">8</li>-->
-<!--        <li class="nav__item" @click="clickCanvas('9')">9</li>-->
-<!--        <li class="nav__item" @click="clickCanvas('10')">10</li>-->
-<!--        <li class="nav__item" @click="clickCanvas('title')">title</li>-->
-<!--        <li class="nav__item" @click="clickCanvas('Door')">Door</li>-->
-<!--        <li class="nav__item" @click="clickCanvas('Reset')">Reset</li>-->
-<!--      </nav>-->
-<!--    </div>-->
+    <div class="buttonBox">
+      <nav class="nav">
+        <li class="nav__item" @click="clickCanvas('1')">1</li>
+        <li class="nav__item" @click="clickCanvas('2')">2</li>
+        <li class="nav__item" @click="clickCanvas('3')">3</li>
+        <li class="nav__item" @click="clickCanvas('4')">4</li>
+        <li class="nav__item" @click="clickCanvas('5')">5</li>
+        <li class="nav__item" @click="clickCanvas('6')">6</li>
+        <li class="nav__item" @click="clickCanvas('7')">7</li>
+        <li class="nav__item" @click="clickCanvas('8')">8</li>
+        <li class="nav__item" @click="clickCanvas('9')">9</li>
+        <li class="nav__item" @click="clickCanvas('10')">10</li>
+        <li class="nav__item" @click="clickCanvas('title')">title</li>
+        <li class="nav__item" @click="clickCanvas('Door')">Door</li>
+        <li class="nav__item" @click="clickCanvas('Reset')">Reset</li>
+      </nav>
+    </div>
 
   </div>
 </template>

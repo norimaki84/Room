@@ -1,25 +1,25 @@
 <template>
   <div class="container">
 
-    <model-viewer
-      id="reveal"
-      ar
-      ar-scale="fixed"
-      alt="test"
-      src="/model/rooo02.gltf"
-      ios-src="/model/rooo01.usdz"
-      background-color="#70BCD1"
-      shadow-intensity="0.7"
-      quick-look-browsers="safari chrome"
-      camera-controls
-      model-visibility="false"
-      interaction-prompt="none"
-      reveal="manual"
-      ar magic-leap>
-      <button class="ar-button" slot="ar-button" style="border: none;">
-        <ArButton/>
-      </button>
-    </model-viewer>
+<!--    <model-viewer-->
+<!--      id="reveal"-->
+<!--      ar-->
+<!--      ar-scale="fixed"-->
+<!--      alt="test"-->
+<!--      src="/model/rooo02.gltf"-->
+<!--      ios-src="/model/rooo01.usdz"-->
+<!--      background-color="#70BCD1"-->
+<!--      shadow-intensity="0.7"-->
+<!--      quick-look-browsers="safari chrome"-->
+<!--      camera-controls-->
+<!--      model-visibility="false"-->
+<!--      interaction-prompt="none"-->
+<!--      reveal="manual"-->
+<!--      ar magic-leap>-->
+<!--      <button class="ar-button" slot="ar-button" style="border: none;">-->
+<!--        <ArButton/>-->
+<!--      </button>-->
+<!--    </model-viewer>-->
 
 <!--    <DetailModal></DetailModal>-->
 

@@ -44,7 +44,7 @@ export default class Room {
     //glTFの読み込み
     this.loader = new GLTFLoader();
 
-    this.loader.load('../model/RoooLoom_v1.gltf', function(data){
+    this.loader.load('../model/RoooLoom_v2.gltf', function(data){
       let gltf = data;
       let obj = gltf.scene;
 
