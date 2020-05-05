@@ -33,8 +33,9 @@ export default class CameraUtils {
     this.cameraControls.mouseButtons.wheel = CameraControls.ACTION.ZOOM;
     // this.cameraControls.mouseButtons.wheel = CameraControls.ACTION.TRUCK;
     this.cameraControls.touches.two = CameraControls.ACTION.TOUCH_ZOOM_TRUCK;
+    // this.cameraControls.setTarget( 494, 150, 300, true );
     this.cameraControls.moveTo(0, 150, 0, false );
-    // this.cameraControls.setTarget( 207, 150, -45, true );
+    // this.cameraControls.dollyTo(0.0001, true);
 
     // this.cameraControls.minDistance = 0;
     // this.cameraControls.maxDistance = 0;
@@ -42,19 +43,12 @@ export default class CameraUtils {
 
     this.cameraControls.saveState();
 
-
     // setTimeout( ()=> {
-      // this.cameraControls.moveTo( -350, 150, 425, true );
-      // this.cameraControls.setTarget( 494, 150, 600, true );
-      // this.cameraControls.dollyTo(0.0001, true);
-    // }, 2000);
-
-    // //
-    // setTimeout( ()=> {
-    //   this.cameraControls.moveTo( 150, 150, 425, true );
-    //   this.cameraControls.setTarget( 150, 150, 442, true );
+    //   this.cameraControls.moveTo( 178, 150, 550, true );
+    //   this.cameraControls.setTarget( 195, 150, 550, true );
+    //   this.cameraControls.zoomTo( 1.0, true );
     //   this.cameraControls.dollyTo(0.0001, true);
-    // }, 5000);
+    // }, 2000);
     // =================
 
   }
@@ -71,85 +65,92 @@ export default class CameraUtils {
   _switchPosition(positionString) {
     switch(positionString) {
       case '1':
+        this.cameraControls.moveTo( 178, 150, 550, true );
+        this.cameraControls.setTarget( 195, 150, 550, true );
+        this.cameraControls.zoomTo( 1.0, true );
+        this.cameraControls.dollyTo(0.0001, true);
+        break;
+
+      case '2':
         this.cameraControls.moveTo( 150, 150, 425, true );
         this.cameraControls.setTarget( 150, 150, 442, true );
         this.cameraControls.zoomTo( 1.0, true );
         this.cameraControls.dollyTo(0.0001, true);
         break;
 
-      case '2':
+      case '3':
         this.cameraControls.moveTo( -150, 150, 425, true );
         this.cameraControls.setTarget( -150, 150, 442, true );
         this.cameraControls.zoomTo( 1.0, true );
         this.cameraControls.dollyTo(0.0001, true);
         break;
 
-      case '3':
+      case '4':
         this.cameraControls.moveTo( -193, 150, 400, true );
         this.cameraControls.setTarget( -210, 150, 400, true );
         this.cameraControls.zoomTo( 1.0, true );
         this.cameraControls.dollyTo(0.0001, true);
         break;
 
-      case '4':
+      case '5':
         this.cameraControls.moveTo( -193, 150, 100, true );
         this.cameraControls.setTarget( -210, 150, 100, true );
         this.cameraControls.zoomTo( 1.0, true );
         this.cameraControls.dollyTo(0.0001, true);
         break;
 
-      case '5':
+      case '6':
         this.cameraControls.moveTo( -193, 150, -200, true );
         this.cameraControls.setTarget( -210, 150, -200, true );
         this.cameraControls.zoomTo( 1.0, true );
         this.cameraControls.dollyTo(0.0001, true);
         break;
 
-      case '6':
+      case '7':
         this.cameraControls.moveTo( -193, 150, -500, true );
         this.cameraControls.setTarget( -210, 150, -500, true );
         this.cameraControls.zoomTo( 1.0, true );
         this.cameraControls.dollyTo(0.0001, true);
         break;
 
-      case '7':
+      case '8':
         this.cameraControls.moveTo( -150, 150, -442, true );
         this.cameraControls.setTarget(-150, 150, -459, true );
         this.cameraControls.zoomTo( 1.0, true );
         this.cameraControls.dollyTo(0.0001, true);
         break;
 
-      case '8':
+      case '9':
         this.cameraControls.moveTo( 150, 150, -442, true );
         this.cameraControls.setTarget( 150, 150, -459, true );
         this.cameraControls.zoomTo( 1.0, true );
         this.cameraControls.dollyTo(0.0001, true);
         break;
 
-      case '9':
+      case '10':
         this.cameraControls.moveTo( 190, 150, -550, true );
         this.cameraControls.setTarget( 207, 150, -550, true );
         this.cameraControls.zoomTo( 1.0, true );
         this.cameraControls.dollyTo(0.0001, true);
         break;
 
-      case '10':
+      case '11':
         this.cameraControls.moveTo( 190, 150, -300, true );
         this.cameraControls.setTarget( 207, 150, -300, true );
         this.cameraControls.zoomTo( 1.0, true );
         this.cameraControls.dollyTo(0.0001, true);
         break;
 
-      case 'title':
-        this.cameraControls.moveTo( 50, 150, 410, true );
-        this.cameraControls.setTarget( 67, 150, 410, true );
+      case 'About':
+        this.cameraControls.moveTo( 178, 150, 300, true );
+        this.cameraControls.setTarget( 195, 150, 300, true );
         this.cameraControls.zoomTo( 1.0, true );
         this.cameraControls.dollyTo(0.0001, true);
         break;
 
       case 'Door':
-        this.cameraControls.moveTo( 190, 150, -45, true );
-        this.cameraControls.setTarget( 207, 150, -45, true );
+        this.cameraControls.moveTo( 190, 150, 0, true );
+        this.cameraControls.setTarget( 207, 150, 0, true );
         this.cameraControls.zoomTo( 1.0, true );
         this.cameraControls.dollyTo(0.0001, true);
         break;
@@ -171,9 +172,7 @@ export default class CameraUtils {
    * @param timeDelta
    */
   update(timeDelta){
-    // console.log("this.cameraControls.getTarget_01", this.cameraControls.getTarget());
     this.cameraControls.update( timeDelta );
-
   }
 
 }

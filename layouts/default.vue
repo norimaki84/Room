@@ -17,7 +17,8 @@
         <li class="nav__item" @click="clickCanvas('8')">8</li>
         <li class="nav__item" @click="clickCanvas('9')">9</li>
         <li class="nav__item" @click="clickCanvas('10')">10</li>
-        <li class="nav__item" @click="clickCanvas('title')">title</li>
+        <li class="nav__item" @click="clickCanvas('11')">11</li>
+        <li class="nav__item" @click="clickCanvas('About')">About</li>
         <li class="nav__item" @click="clickCanvas('Door')">Door</li>
         <li class="nav__item" @click="clickCanvas('Reset')">Reset</li>
       </nav>
@@ -82,8 +83,12 @@
             EventBus.$emit("SWITCH_POSITION", '10');
             break;
 
-          case 'title':
-            EventBus.$emit("SWITCH_POSITION", 'title');
+          case '11':
+            EventBus.$emit("SWITCH_POSITION", '11');
+            break;
+
+          case 'About':
+            EventBus.$emit("SWITCH_POSITION", 'About');
             break;
 
           case 'Door':

@@ -32,7 +32,6 @@ export default class Room {
     let touchEvent = 'ontouchend' in document ? 'touchstart' : 'mousedown';
     window.addEventListener( touchEvent, this.onDocumentMouseDown, false );
     //EventBus.$on("TRANSITION", this.onTransition.bind(this));
-    //EventBus.$on("TRANSITION", this.onTransition.bind(this));
   }
 
   /**
@@ -40,20 +39,46 @@ export default class Room {
    */
   _assetsLoad() {
     let _this = this;
-
+    let mixer;
     //glTFの読み込み
     this.loader = new GLTFLoader();
 
     this.loader.load('../model/RoooLoom_v2.gltf', function(data){
       let gltf = data;
       let obj = gltf.scene;
+      let animations = gltf.animations;
+
+      // console.log(animations);
+      // if(animations && animations.length) {
+      //
+      //   //Animation Mixerインスタンスを生成
+      //   mixer = new THREE.AnimationMixer(obj);
+      //
+      //   //全てのAnimation Clipに対して
+      //   for ( let i = 0; i < animations.length; i ++ ) {
+      //     let animation = animations[i];
+      //     console.log("anime" + i + " animations[i]");
+      //
+      //     //Animation Actionを生成
+      //     let action = mixer.clipAction(animation) ;
+      //
+      //     //ループ設定（1回のみ）
+      //     action.setLoop(THREE.LoopOnce);
+      //
+      //     //アニメーションの最後のフレームでアニメーションが終了
+      //     action.clampWhenFinished = true;
+      //
+      //     //アニメーションを再生
+      //     action.play();
+      //   }
+      // }
 
       for(let i = 0; i < obj.children.length; i++){
 
         let mesh = obj.children[i];
         // _this.rayReceiveObjects.push( obj.children[i] );
         //コンソールにMeshの名前一覧を出力。
-        // console.log(i, mesh.name);
+        // console.log(mesh.name + ' x:' + mesh.position.x + ' y:' + mesh.position.y + ' z:' + mesh.position.z);
         // console.log(i, mesh);
       }
 
@@ -68,44 +93,52 @@ export default class Room {
    */
   _switchModal(texName) {
     switch (texName) {
-      case '1':
-        console.log("1");
+      case 'P01':
+        console.log("P01_CLICK");
         break;
 
-      case '2':
-        console.log("2");
+      case 'P02':
+        console.log("P02_CLICK");
         break;
 
-      case '3':
-        console.log("3");
+      case 'P03':
+        console.log("P03_CLICK");
         break;
 
-      case '4':
-        console.log("4");
+      case 'P04':
+        console.log("P04_CLICK");
         break;
 
-      case '5':
-        console.log("5");
+      case 'P05':
+        console.log("P05_CLICK");
         break;
 
-      case '6':
-        console.log("6");
+      case 'P06':
+        console.log("P06_CLICK");
         break;
 
-      case '7':
-        console.log("7");
+      case 'P07':
+        console.log("P07_CLICK");
         break;
 
-      case '8':
-        console.log("8");
+      case 'P08':
+        console.log("P08_CLICK");
         break;
 
-      case '9':
-        console.log("9");
+      case 'P09':
+        console.log("P09_CLICK");
         break;
 
-      case '10':
-        console.log("10");
+      case 'P010':
+        console.log("P10_CLICK");
+        break;
+
+      case 'P011':
+        console.log("P11_CLICK");
+        break;
+
+      case 'P012':
+        console.log("P12_CLICK");
         break;
 
       case 'title':
@@ -145,11 +178,17 @@ export default class Room {
     let intersects = raycaster.intersectObjects(CommonGL.scene.children, true);
     // 交わるオブジェクトが１個以上の場合
     if (intersects.length > 0) {
+
+
+      // console.log("カメラ位置座標からの距離：" + intersects[0].distance);
+      // console.log("光線との交差座標(" + intersects[0].point.x + ", " + intersects[0].point.y + ", " + intersects[0].point.z + ")" );
+      // console.log(intersects[0]);
+
       // console.log(intersects[0].object.parent.name);
       // console.log(intersects[0].object.parent);
       let objName = intersects[0].object.parent.name ? intersects[0].object.parent.name : (intersects[0].object.material || {}).name || null;
       // console.log("name ", objName);
-      this.switchModal(objName);
+      // this.switchModal(objName);
     }
 
 
@@ -187,31 +226,6 @@ export default class Room {
     //   }
     // }
 
-  }
-
-  /**
-   * URLのパスに基づいて
-   * @param path
-   */
-  onTransition(path){
-    switch(path){
-      case "index":
-        // this.transitionTarget.set(1, 0, 0, 0);
-        break;
-
-      case "work":
-        // this.transitionTarget.set(0, 1, 0, 0);
-        break;
-
-      case "service":
-        // this.transitionTarget.set(0, 0, 1, 0);
-        break;
-
-      default:
-        // this.transitionTarget.set(0, 0, 0, 1);
-        break;
-
-    }
   }
 
   update(){
