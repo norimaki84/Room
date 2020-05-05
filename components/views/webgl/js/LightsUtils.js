@@ -19,6 +19,7 @@ export default class LightsUtils {
     this.spotLight09 = null;
     this.spotLight10 = null;
     this.spotLight11 = null;
+    this.spotLight12 = null;
     this.spotLightHelper = null;
 
     this.titleRectAreaLight = null;
@@ -34,7 +35,7 @@ export default class LightsUtils {
   _init() {
 
     // 環境光を設定
-    let ambientLight = new THREE.AmbientLight( 0xffffff, 1.0 ); // soft white light
+    let ambientLight = new THREE.AmbientLight( 0xffffff, 0.95 ); // soft white light
     // light.color.setHSL(0.1, 1, 0.95);
     // let light = new THREE.AmbientLight( 0x666666, 1.0 ); // soft white light
     // let light = new THREE.AmbientLight( 0xe5e5e5, 0.5 ); // soft white light
@@ -177,6 +178,8 @@ export default class LightsUtils {
     this.spotLight10.shadow.camera.far = 4000;
     this.spotLight10.shadow.camera.fov = 30;
     CommonGL.scene.add( this.spotLight10 );
+    // let spotLightHelper11 = new THREE.SpotLightHelper( this.spotLight11 );
+    // CommonGL.scene.add( spotLightHelper11 );
 
     this.spotLight11 = new THREE.SpotLight( spotLightColor, intensity, distance, angle, penumbra, decay);
     this.spotLight11.position.set( -354, -202, -550 );
@@ -187,9 +190,22 @@ export default class LightsUtils {
     this.spotLight11.shadow.camera.near = 500;
     this.spotLight11.shadow.camera.far = 4000;
     this.spotLight11.shadow.camera.fov = 30;
-    // CommonGL.scene.add( this.spotLight11 );
+    CommonGL.scene.add( this.spotLight11 );
     // let spotLightHelper11 = new THREE.SpotLightHelper( this.spotLight11 );
     // CommonGL.scene.add( spotLightHelper11 );
+
+    this.spotLight12 = new THREE.SpotLight( spotLightColor, intensity, distance, angle, penumbra, decay);
+    this.spotLight12.position.set( 231, 383, 550 );
+    this.spotLight12.target.position.set( 490, 150, 550 );
+    this.spotLight12.target.updateMatrixWorld();
+    this.spotLight12.shadow.mapSize.width = 1024;
+    this.spotLight12.shadow.mapSize.height = 1024;
+    this.spotLight12.shadow.camera.near = 500;
+    this.spotLight12.shadow.camera.far = 4000;
+    this.spotLight12.shadow.camera.fov = 30;
+    CommonGL.scene.add( this.spotLight12 );
+    // this.spotLightHelper = new THREE.SpotLightHelper( this.spotLight12 );
+    // CommonGL.scene.add( this.spotLightHelper );
 
     // this.buildGui();
   }
@@ -202,59 +218,59 @@ export default class LightsUtils {
     this.gui = new dat.GUI();
 
     let params = {
-      'light color': this.spotLight09.color.getHex(),
-      positionX : this.spotLight09.position.x,
-      positionY : this.spotLight09.position.y,
-      positionZ : this.spotLight09.position.z,
-      intensity: this.spotLight09.intensity,
-      distance: this.spotLight09.distance,
-      angle: this.spotLight09.angle,
-      penumbra: this.spotLight09.penumbra,
-      decay: this.spotLight09.decay
+      'light color': this.spotLight12.color.getHex(),
+      positionX : this.spotLight12.position.x,
+      positionY : this.spotLight12.position.y,
+      positionZ : this.spotLight12.position.z,
+      intensity: this.spotLight12.intensity,
+      distance: this.spotLight12.distance,
+      angle: this.spotLight12.angle,
+      penumbra: this.spotLight12.penumbra,
+      decay: this.spotLight12.decay
     };
 
     this.gui.addColor( params, 'light color' ).onChange( function ( val ) {
-      _this.spotLight09.color.setHex( val );
+      _this.spotLight12.color.setHex( val );
       _this.update();
     });
 
     this.gui.add( params, 'intensity', 0, 2 ).onChange( function ( val ) {
-      _this.spotLight09.intensity = val;
+      _this.spotLight12.intensity = val;
       _this.update();
     });
 
     this.gui.add( params, 'positionX', -1000, 1000 ).onChange( function ( val ) {
-      _this.spotLight09.position.x = val;
+      _this.spotLight12.position.x = val;
       _this.update();
     });
 
     this.gui.add( params, 'positionY', -1000, 1000 ).onChange( function ( val ) {
-      _this.spotLight09.position.y = val;
+      _this.spotLight12.position.y = val;
       _this.update();
     });
 
     this.gui.add( params, 'positionZ', -1000, 1000 ).onChange( function ( val ) {
-      _this.spotLight09.position.z = val;
+      _this.spotLight12.position.z = val;
       _this.update();
     });
 
     this.gui.add( params, 'distance', 50, 4000 ).onChange( function ( val ) {
-      _this.spotLight09.distance = val;
+      _this.spotLight12.distance = val;
       _this.update();
     });
 
     this.gui.add( params, 'angle', 0, Math.PI / 3 ).onChange( function ( val ) {
-      _this.spotLight09.angle = val;
+      _this.spotLight12.angle = val;
       _this.update();
     });
 
     this.gui.add( params, 'penumbra', 0, 1 ).onChange( function ( val ) {
-      _this.spotLight09.penumbra = val;
+      _this.spotLight12.penumbra = val;
       _this.update();
     });
 
     this.gui.add( params, 'decay', 1, 2 ).onChange( function ( val ) {
-      _this.spotLight09.decay = val;
+      _this.spotLight12.decay = val;
       _this.update();
     });
     this.gui.open();

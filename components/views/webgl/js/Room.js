@@ -87,66 +87,71 @@ export default class Room {
   }
 
   /**
-   * クリックされた絵から開くモーダルを振り分け
+   * クリックされたオブジェクトから
+   * イベント発火振り分け
    * @param texName
    * @private
    */
   _switchModal(texName) {
     switch (texName) {
       case 'P01':
-        console.log("P01_CLICK");
+        // console.log("P01_CLICK");
+        EventBus.$emit("SWITCH_POSITION", 'About');
         break;
 
       case 'P02':
-        console.log("P02_CLICK");
+        // console.log("P02_CLICK");
+        EventBus.$emit("SWITCH_POSITION", '1');
         break;
 
       case 'P03':
-        console.log("P03_CLICK");
+        // console.log("P03_CLICK");
+        EventBus.$emit("SWITCH_POSITION", '2');
         break;
 
       case 'P04':
-        console.log("P04_CLICK");
+        // console.log("P04_CLICK");
+        EventBus.$emit("SWITCH_POSITION", '3');
         break;
 
       case 'P05':
-        console.log("P05_CLICK");
+        // console.log("P05_CLICK");
+        EventBus.$emit("SWITCH_POSITION", '4');
         break;
 
       case 'P06':
-        console.log("P06_CLICK");
+        // console.log("P06_CLICK");
+        EventBus.$emit("SWITCH_POSITION", '5');
         break;
 
       case 'P07':
-        console.log("P07_CLICK");
+        // console.log("P07_CLICK");
+        EventBus.$emit("SWITCH_POSITION", '6');
         break;
 
       case 'P08':
-        console.log("P08_CLICK");
+        // console.log("P08_CLICK");
+        EventBus.$emit("SWITCH_POSITION", '7');
         break;
 
       case 'P09':
-        console.log("P09_CLICK");
+        // console.log("P09_CLICK");
+        EventBus.$emit("SWITCH_POSITION", '8');
         break;
 
-      case 'P010':
-        console.log("P10_CLICK");
+      case 'P10':
+        // console.log("P10_CLICK");
+        EventBus.$emit("SWITCH_POSITION", '9');
         break;
 
-      case 'P011':
-        console.log("P11_CLICK");
+      case 'P11':
+        // console.log("P11_CLICK");
+        EventBus.$emit("SWITCH_POSITION", '11');
         break;
 
-      case 'P012':
-        console.log("P12_CLICK");
-        break;
-
-      case 'title':
-        console.log("title");
-        break;
-
-      case 'Door':
-        console.log("Door");
+      case 'P12':
+        // console.log("P12_CLICK");
+        EventBus.$emit("SWITCH_POSITION", '10');
         break;
 
       default:
@@ -176,55 +181,22 @@ export default class Room {
     raycaster.setFromCamera(mouse, CommonGL.camera);
     // 光線と交わるオブジェクトを収集
     let intersects = raycaster.intersectObjects(CommonGL.scene.children, true);
+
+    // console.log(intersects.length);
+
     // 交わるオブジェクトが１個以上の場合
     if (intersects.length > 0) {
 
 
       // console.log("カメラ位置座標からの距離：" + intersects[0].distance);
       // console.log("光線との交差座標(" + intersects[0].point.x + ", " + intersects[0].point.y + ", " + intersects[0].point.z + ")" );
-      // console.log(intersects[0]);
 
       // console.log(intersects[0].object.parent.name);
       // console.log(intersects[0].object.parent);
       let objName = intersects[0].object.parent.name ? intersects[0].object.parent.name : (intersects[0].object.material || {}).name || null;
-      // console.log("name ", objName);
-      // this.switchModal(objName);
+      console.log("name ", objName);
+      this.switchModal(objName);
     }
-
-
-    // マウスポインタの位置座標の取得
-    // this.mouseX = ( event.clientX / window.innerWidth ) * 2 - 1;
-    // this.mouseY = - ( event.clientY / window.innerHeight ) * 2 + 1;
-
-    // 光線を発射
-    // this.raycaster.setFromCamera( this.mouse, CommonGL.camera );
-    // 光線と交わるオブジェクトを収集
-    // let intersects = this.raycaster.intersectObjects( this.rayReceiveObjects );
-
-    // 連想配列をとりだす
-    // let bookAry = {
-    //   '火花' : 'http://www.amazon.co.jp/dp/4163902309',
-    //   '流' : 'http://www.amazon.co.jp/dp/4062194856',
-    //   '朝が来る' : 'http://www.amazon.co.jp/dp/4163902732',
-    //   '王とサーカス' : 'http://www.amazon.co.jp/dp/4488027512',
-    //   '君の膵臓をたべたい' : 'http://www.amazon.co.jp/dp/4575239054'
-    // };
-
-    // 交わるオブジェクトが１個以上の場合
-    // if ( intersects.length > 0 ) {
-    //   // 最も近いオブジェクトの名前をアラート表示する
-    //   alert(intersects[0].object.name + "をご購入ですね？");
-    //
-    //   console.log("カメラ位置座標からの距離：" + intersects[0].distance);
-    //   console.log("光線との交差座標(" + intersects[0].point.x + ", " + intersects[0].point.y + ", " + intersects[0].point.z + ")" );
-    //   console.log(intersects[0]);
-    //
-    //   for(let i in bookAry){
-    //     if (intersects[0].object.name == i) {
-    //       window.location.href = bookAry[i];
-    //     }
-    //   }
-    // }
 
   }
 
