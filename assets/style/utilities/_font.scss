@@ -46,3 +46,15 @@
     url('/fonts/NotoSansCJKjp-Black.ttf') format('truetype');
   font-display: swap;
 }
+
+/* Poppins */
+@font-face {
+  font-family: 'Poppins-Medium';
+  font-style: normal;
+  font-weight: 500;
+  src:
+    url('/fonts/Poppins-Medium.woff2') format('woff2'),
+    url('/fonts/Poppins-Medium.woff') format('woff'),
+    url('/fonts/Poppins-Medium.ttf') format('truetype');
+  font-display: swap;
+}

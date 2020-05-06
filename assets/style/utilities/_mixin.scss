@@ -20,6 +20,10 @@
   font-family: 'NotoSansCJKjp-Black', sans-serif;
 }
 
+@mixin poppinsMedium {
+  font-family: 'Poppins-Medium', sans-serif;
+}
+
 // letter-spacing設定
 @mixin tracking($value) {
   letter-spacing: ($value / 1000) + em;
