@@ -10,12 +10,10 @@
 <script>
   import EventBus from "~/utils/event-bus";
   import WebglCanvas from "~/components/views/webgl/WebglCanvas";
-  import Nav from "~/components/common/Nav";
 
   export default {
     components: {
       WebglCanvas,
-      // Nav
     },
     mounted () {
 
