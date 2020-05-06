@@ -31,7 +31,6 @@ export default class CameraUtils {
     this.cameraControls.polarRotateSpeed   = - 0.3; // negative value to invert rotation direction
     this.cameraControls.truckSpeed = 1 / EPS * 3;
     this.cameraControls.mouseButtons.wheel = CameraControls.ACTION.ZOOM;
-    // this.cameraControls.mouseButtons.wheel = CameraControls.ACTION.TRUCK;
     this.cameraControls.touches.two = CameraControls.ACTION.TOUCH_ZOOM_TRUCK;
     // this.cameraControls.setTarget( 494, 150, 300, true );
     this.cameraControls.moveTo(0, 150, 0, false );
@@ -42,12 +41,12 @@ export default class CameraUtils {
 
     this.cameraControls.saveState();
 
-    // setTimeout( ()=> {
-    //   this.cameraControls.moveTo( 178, 150, 550, true );
-    //   this.cameraControls.setTarget( 195, 150, 550, true );
-    //   this.cameraControls.zoomTo( 1.0, true );
-    //   this.cameraControls.dollyTo(0.0001, true);
-    // }, 2000);
+    setTimeout( ()=> {
+      this.cameraControls.moveTo( -295, 150, -400, true );
+      this.cameraControls.setTarget( 195, 150, 50, true );
+      this.cameraControls.zoomTo( 1.0, true );
+      this.cameraControls.dollyTo(0.0001, true );
+    }, 2000);
     // =================
 
   }

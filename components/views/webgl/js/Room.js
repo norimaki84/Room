@@ -32,6 +32,7 @@ export default class Room {
     let touchEvent = 'ontouchend' in document ? 'touchstart' : 'mousedown';
     window.addEventListener( touchEvent, this.onDocumentMouseDown, false );
     //EventBus.$on("TRANSITION", this.onTransition.bind(this));
+
   }
 
   /**
@@ -166,7 +167,7 @@ export default class Room {
    */
   _onDocumentMouseDown(event) {
 
-    let raycaster = new THREE.Raycaster();
+    let _Raycaster = new THREE.Raycaster();
     let mouse = new THREE.Vector2();
 
     // マウスポインタの位置座標の取得
@@ -178,24 +179,16 @@ export default class Room {
     mouse.y = - (y / window.innerHeight) * 2 + 1;
 
     // 光線を発射
-    raycaster.setFromCamera(mouse, CommonGL.camera);
-    // 光線と交わるオブジェクトを収集
-    let intersects = raycaster.intersectObjects(CommonGL.scene.children, true);
+    _Raycaster.setFromCamera(mouse, CommonGL.camera);
 
-    // console.log(intersects.length);
+    // 光線と交わるオブジェクトを収集
+    let intersects = _Raycaster.intersectObjects(CommonGL.scene.children, true);
 
     // 交わるオブジェクトが１個以上の場合
     if (intersects.length > 0) {
-
-
-      // console.log("カメラ位置座標からの距離：" + intersects[0].distance);
-      // console.log("光線との交差座標(" + intersects[0].point.x + ", " + intersects[0].point.y + ", " + intersects[0].point.z + ")" );
-
-      // console.log(intersects[0].object.parent.name);
-      // console.log(intersects[0].object.parent);
       let objName = intersects[0].object.parent.name ? intersects[0].object.parent.name : (intersects[0].object.material || {}).name || null;
-      console.log("name ", objName);
-      this.switchModal(objName);
+      // console.log("objName:", objName);
+      // this.switchModal(objName);
     }
 
   }
