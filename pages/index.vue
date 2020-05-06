@@ -1,6 +1,8 @@
 <template>
   <div class="container">
+    <div class="enterBox">
 
+    </div>
 <!--    <model-viewer-->
 <!--      id="reveal"-->
 <!--      ar-->
@@ -23,18 +25,21 @@
 
 <!--    <DetailModal></DetailModal>-->
 
+    <ControlBox></ControlBox>
   </div>
 </template>
 
 <script>
   import EventBus from "~/utils/event-bus";
+  import ControlBox from '../components/common/ControlBox';
   import DetailModal from '../components/common/DetailModal';
   import ArButton from '@/assets/svg/ar.svg';
 
   export default {
     components: {
       DetailModal,
-      ArButton
+      ArButton,
+      ControlBox
     },
     data() {
       return {
@@ -100,13 +105,4 @@
   }
 
 
-  .title {
-    @include sansJpBold();
-    display: block;
-    font-size: 50px;
-    color: #35495e;
-    letter-spacing: 1px;
-    margin-top: 50px;
-    margin-left: 50px;
-  }
 </style>
