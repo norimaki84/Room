@@ -41,14 +41,16 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    { src: '~/plugins/camera-controls.js', ssr: false }
+    { src: '~/plugins/camera-controls.js', ssr: false },
   ],
   /*
   ** Nuxt.js dev-modules
   */
   buildModules: [
-    // Doc: https://github.com/nuxt-community/eslint-module
-    // '@nuxtjs/eslint-module'
+    // TODO:本番公開前にオンにする
+    // ['@nuxtjs/google-analytics', {
+    //   id: 'UA-165424285-1'
+    // }]
   ],
   /*
   ** Nuxt.js modules
