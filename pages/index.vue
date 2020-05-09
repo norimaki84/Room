@@ -38,14 +38,21 @@
       </model-viewer>
       <div class="buy__button">
         <div class="buy__button--inner">
-          <p class="buy__button--text">BUY</p>
-          <div class="cart__icon">
-            <CartButton></CartButton>
-          </div>
+          <a href="#" target="_blank">
+            <p class="buy__button--text">BUY</p>
+            <div class="cart__icon">
+              <CartButton></CartButton>
+            </div>
+          </a>
         </div>
       </div>
       <div class="detail__button">
-
+        <div class="detail__button--inner">
+          <p class="detail__button--text">DETAIL</p>
+          <div class="cart__icon">
+            <DetailButton></DetailButton>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -160,9 +167,8 @@
     height: get-vw(401px);
     position: fixed;
     top: get-vw(603px);
-    right: get-vw(18px);
+    right: 0;
     overflow: hidden;
-    background-color: yellow;
     z-index: 100;
   }
 
@@ -177,6 +183,7 @@
       width: 100%;
       height: 100%;
       border-radius: 50%;
+      box-shadow: 0 get-vw(5px) get-vw(20px) rgba(0, 0, 0, 0.10);
       background-color: #fff;
       display: flex;
       justify-content: center;
@@ -218,6 +225,7 @@
     height: get-vw(140px);
     border-radius: 50%;
     background-color: #fff;
+    box-shadow: 0 get-vw(5px) get-vw(20px) rgba(0, 0, 0, 0.10);
     margin-top: get-vw(-11px);
     position: relative;
     z-index: 5;
@@ -226,6 +234,12 @@
     align-items: center;
   }
   .buy__button--inner {
+    a {
+      display: block;
+      width: 100%;
+      height: auto;
+      text-decoration: none;
+    }
     .buy__button--text {
       @include poppinsMedium();
       font-size: get-vw(22px);
@@ -243,14 +257,36 @@
       }
     }
   }
+
   .detail__button {
     width: get-vw(140px);
     height: get-vw(140px);
     border-radius: 50%;
     background-color: #fff;
+    box-shadow: 0 get-vw(5px) get-vw(20px) rgba(0, 0, 0, 0.10);
     margin-top: get-vw(-11px);
     position: relative;
     z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-
+  .detail__button--inner {
+    .detail__button--text {
+      @include poppinsMedium();
+      font-size: get-vw(22px);
+      color: #000;
+      line-height: 1.0;
+      margin-bottom: get-vw(13px);
+    }
+    .cart__icon {
+      width: get-vw(32px);
+      height: get-vw(36px);
+      margin: auto;
+      svg {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
 </style>
