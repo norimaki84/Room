@@ -57,7 +57,7 @@
     </div>
 
     <ControlBox></ControlBox>
-    <!--    <DetailModal></DetailModal>-->
+    <DetailModal></DetailModal>
   </div>
 </template>
 
