@@ -114,178 +114,189 @@
     z-index: 10;
   }
 
-  .enterSection {
-    width: 100%;
-    height: 100vh;
-    min-height: 100vh;
-    min-height: -webkit-fill-available;
-    z-index: 100;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0.0; // TODO
-    display: none; // TODO
-  }
-  .enterSection__content {}
-  .enterSection__mainTitle {
-    width: get-vw(288px);
-    height: auto;
-    margin: 0 auto get-vw(185px);
-    svg {
+  @media screen and (max-width: 768px) {
+    .container {
       width: 100%;
+      height: 100vh;
+      min-height: 100vh;
+      min-height: -webkit-fill-available;
+      position: relative;
+      z-index: 10;
     }
-  }
-  .enterSection__startButton {
-    text-align: center;
-    margin-bottom: get-vw(158px);
-  }
-  .enterSection__startButton--text {
-    @include poppinsMedium();
-    font-size: get-vw(24px);
-    margin-bottom: get-vw(29px);
-    color: #000;
-    line-height: 1.0;
-  }
-  .enterSection__startButton--border {
-    width: get-vw(220px);
-    height: get-vw(1px);
-    margin: 0 auto;
-    background-color: #000;
-  }
-  .enterSection__description {
-    @include sansJpMedium();
-    font-size: get-vw(22px);
-    color: #b1b1b1;
-  }
 
-  .detailUIBox {
-    width: get-vw(124px);
-    height: get-vw(401px);
-    position: fixed;
-    top: get-vw(603px);
-    right: 0;
-    overflow: hidden;
-    z-index: 100;
-  }
-
-  .reveal {
-    width: get-vw(140px);
-    height: get-vw(140px);
-    position: relative;
-    z-index: 1;
-    --poster-color: transparent;
-    --progress-bar-color: rgba(0, 0, 0, 0.0);
-    .ar-button {
+    .enterSection {
       width: 100%;
-      height: 100%;
-      border-radius: 50%;
-      box-shadow: 0 get-vw(5px) get-vw(20px) rgba(0, 0, 0, 0.10);
+      height: 100vh;
+      min-height: 100vh;
+      min-height: -webkit-fill-available;
+      z-index: 100;
+      position: absolute;
+      top: 0;
+      left: 0;
       background-color: #fff;
       display: flex;
       justify-content: center;
       align-items: center;
-      .ARButton__inner {
-        margin-top: get-vw(-5px);
-        .ARButton__text {
-          @include poppinsMedium();
-          font-size: get-vw(22px);
-          color: #000;
-          line-height: 1.0;
-          /*margin-bottom: get-vw(15px);*/
+      opacity: 0.0; // TODO
+      display: none; // TODO
+    }
+    .enterSection__content {}
+    .enterSection__mainTitle {
+      width: get-vw(288px);
+      height: auto;
+      margin: 0 auto get-vw(185px);
+      svg {
+        width: 100%;
+      }
+    }
+    .enterSection__startButton {
+      text-align: center;
+      margin-bottom: get-vw(158px);
+    }
+    .enterSection__startButton--text {
+      @include poppinsMedium();
+      font-size: get-vw(24px);
+      margin-bottom: get-vw(29px);
+      color: #000;
+      line-height: 1.0;
+    }
+    .enterSection__startButton--border {
+      width: get-vw(220px);
+      height: get-vw(1px);
+      margin: 0 auto;
+      background-color: #000;
+    }
+    .enterSection__description {
+      @include sansJpMedium();
+      font-size: get-vw(22px);
+      color: #b1b1b1;
+    }
+
+    .detailUIBox {
+      width: get-vw(124px);
+      height: get-vw(401px);
+      position: fixed;
+      top: get-vw(603px);
+      right: 0;
+      overflow: hidden;
+      z-index: 100;
+    }
+
+    .reveal {
+      width: get-vw(140px);
+      height: get-vw(140px);
+      position: relative;
+      z-index: 1;
+      --poster-color: transparent;
+      --progress-bar-color: rgba(0, 0, 0, 0.0);
+      .ar-button {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        box-shadow: 0 get-vw(5px) get-vw(20px) rgba(0, 0, 0, 0.10);
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .ARButton__inner {
+          margin-top: get-vw(-5px);
+          .ARButton__text {
+            @include poppinsMedium();
+            font-size: get-vw(22px);
+            color: #000;
+            line-height: 1.0;
+            /*margin-bottom: get-vw(15px);*/
+          }
+          .ARCamera__icon {
+            width: get-vw(33px);
+            height: get-vw(27px);
+            margin: 0 auto;
+            svg {
+              width: 100%;
+              height: auto;
+            }
+          }
         }
-        .ARCamera__icon {
-          width: get-vw(33px);
-          height: get-vw(27px);
-          margin: 0 auto;
+
+        .fab {
+
+          background-color: rebeccapurple;
           svg {
-            width: 100%;
-            height: auto;
+            width: get-vw(33px);
+            height: get-vw(26px);
+            /*width: 100%;*/
+            /*height: auto;*/
           }
         }
       }
-
-      .fab {
-
-        background-color: rebeccapurple;
+    }
+    .buy__button {
+      width: get-vw(140px);
+      height: get-vw(140px);
+      border-radius: 50%;
+      background-color: #fff;
+      box-shadow: 0 get-vw(5px) get-vw(20px) rgba(0, 0, 0, 0.10);
+      margin-top: get-vw(-11px);
+      position: relative;
+      z-index: 5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .buy__button--inner {
+      a {
+        display: block;
+        width: 100%;
+        height: auto;
+        text-decoration: none;
+      }
+      .buy__button--text {
+        @include poppinsMedium();
+        font-size: get-vw(22px);
+        color: #000;
+        line-height: 1.0;
+        margin-bottom: get-vw(13px);
+      }
+      .cart__icon {
+        width: get-vw(32px);
+        height: get-vw(36px);
+        margin: auto;
         svg {
-          width: get-vw(33px);
-          height: get-vw(26px);
-          /*width: 100%;*/
-          /*height: auto;*/
+          width: 100%;
+          height: auto;
         }
       }
     }
-  }
-  .buy__button {
-    width: get-vw(140px);
-    height: get-vw(140px);
-    border-radius: 50%;
-    background-color: #fff;
-    box-shadow: 0 get-vw(5px) get-vw(20px) rgba(0, 0, 0, 0.10);
-    margin-top: get-vw(-11px);
-    position: relative;
-    z-index: 5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .buy__button--inner {
-    a {
-      display: block;
-      width: 100%;
-      height: auto;
-      text-decoration: none;
-    }
-    .buy__button--text {
-      @include poppinsMedium();
-      font-size: get-vw(22px);
-      color: #000;
-      line-height: 1.0;
-      margin-bottom: get-vw(13px);
-    }
-    .cart__icon {
-      width: get-vw(32px);
-      height: get-vw(36px);
-      margin: auto;
-      svg {
-        width: 100%;
-        height: auto;
-      }
-    }
-  }
 
-  .detail__button {
-    width: get-vw(140px);
-    height: get-vw(140px);
-    border-radius: 50%;
-    background-color: #fff;
-    box-shadow: 0 get-vw(5px) get-vw(20px) rgba(0, 0, 0, 0.10);
-    margin-top: get-vw(-11px);
-    position: relative;
-    z-index: 10;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .detail__button--inner {
-    .detail__button--text {
-      @include poppinsMedium();
-      font-size: get-vw(22px);
-      color: #000;
-      line-height: 1.0;
-      margin-bottom: get-vw(13px);
+    .detail__button {
+      width: get-vw(140px);
+      height: get-vw(140px);
+      border-radius: 50%;
+      background-color: #fff;
+      box-shadow: 0 get-vw(5px) get-vw(20px) rgba(0, 0, 0, 0.10);
+      margin-top: get-vw(-11px);
+      position: relative;
+      z-index: 10;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
-    .cart__icon {
-      width: get-vw(32px);
-      height: get-vw(36px);
-      margin: auto;
-      svg {
-        width: 100%;
-        height: auto;
+    .detail__button--inner {
+      .detail__button--text {
+        @include poppinsMedium();
+        font-size: get-vw(22px);
+        color: #000;
+        line-height: 1.0;
+        margin-bottom: get-vw(13px);
+      }
+      .cart__icon {
+        width: get-vw(32px);
+        height: get-vw(36px);
+        margin: auto;
+        svg {
+          width: 100%;
+          height: auto;
+        }
       }
     }
   }
