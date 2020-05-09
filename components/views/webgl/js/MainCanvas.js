@@ -1,6 +1,5 @@
 import Stats from 'three/examples/jsm/libs/stats.module';
 import CommonGL from "./CommonGL";
-// import Shape from "./Shape";
 import Room from './Room';
 
 export default class MainCanvas {
@@ -16,12 +15,11 @@ export default class MainCanvas {
    */
   init(){
     CommonGL.init(this.props.$canvas);
-    // this.shape = new Shape();
     this.room = new Room();
 
     window.addEventListener("resize", this.resize.bind(this));
 
-    this.initStats();
+    // this.initStats();
 
     this.update();
   }
@@ -49,7 +47,7 @@ export default class MainCanvas {
     this.render();
 
     // FPS表示
-    this.stats.update();
+    // this.stats.update();
 
     requestAnimationFrame(this.update.bind(this));
   }
@@ -58,7 +56,6 @@ export default class MainCanvas {
    * アップデート
    */
   render() {
-    // this.shape.update();
     CommonGL.render();
   }
 
