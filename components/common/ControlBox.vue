@@ -47,46 +47,68 @@
         switch (canvasString) {
           case '1':
             EventBus.$emit("SWITCH_POSITION", '1');
+            EventBus.$emit("SET_BUY_LINK", 'room01');
+            this.$store.dispatch('setStateData', 'room01');
             break;
 
           case '2':
             EventBus.$emit("SWITCH_POSITION", '2');
+            EventBus.$emit("SET_BUY_LINK", 'room02');
+            this.$store.dispatch('setStateData', 'room02');
             break;
 
           case '3':
             EventBus.$emit("SWITCH_POSITION", '3');
+            EventBus.$emit("SET_BUY_LINK", 'room03');
+            this.$store.dispatch('setStateData', 'room03');
             break;
 
           case '4':
             EventBus.$emit("SWITCH_POSITION", '4');
+            EventBus.$emit("SET_BUY_LINK", 'room04');
+            this.$store.dispatch('setStateData', 'room04');
             break;
 
           case '5':
             EventBus.$emit("SWITCH_POSITION", '5');
+            EventBus.$emit("SET_BUY_LINK", 'room05');
+            this.$store.dispatch('setStateData', 'room05');
             break;
 
           case '6':
             EventBus.$emit("SWITCH_POSITION", '6');
+            EventBus.$emit("SET_BUY_LINK", 'room06');
+            this.$store.dispatch('setStateData', 'room06');
             break;
 
           case '7':
             EventBus.$emit("SWITCH_POSITION", '7');
+            EventBus.$emit("SET_BUY_LINK", 'room07');
+            this.$store.dispatch('setStateData', 'room07');
             break;
 
           case '8':
             EventBus.$emit("SWITCH_POSITION", '8');
+            EventBus.$emit("SET_BUY_LINK", 'room08');
+            this.$store.dispatch('setStateData', 'room08');
             break;
 
           case '9':
             EventBus.$emit("SWITCH_POSITION", '9');
+            EventBus.$emit("SET_BUY_LINK", 'room09');
+            this.$store.dispatch('setStateData', 'room09');
             break;
 
           case '10':
             EventBus.$emit("SWITCH_POSITION", '10');
+            EventBus.$emit("SET_BUY_LINK", 'room10');
+            this.$store.dispatch('setStateData', 'room10');
             break;
 
           case '11':
             EventBus.$emit("SWITCH_POSITION", '11');
+            EventBus.$emit("SET_BUY_LINK", 'room11');
+            this.$store.dispatch('setStateData', 'room11');
             break;
 
           case 'About':

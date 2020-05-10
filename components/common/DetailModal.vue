@@ -3,16 +3,16 @@
     <div class="detailModal__inner">
       <dl class="detailModal__titleBox">
         <dt class="detailModal__titleBox--Tag">TITLE:</dt>
-        <dd class="detailModal__titleBox--Text">Room</dd>
+        <dd class="detailModal__titleBox--Text">{{ this.canvasArray[this.getState].detail.title }}</dd>
       </dl>
       <div class="dlWrap">
         <dl class="detailModal__sizeBox">
           <dt class="detailModal__sizeBox--Tag">SIZE:</dt>
-          <dd class="detailModal__sizeBox--Text">33.3xm × 33.3cm</dd>
+          <dd class="detailModal__sizeBox--Text">{{ this.canvasArray[this.getState].detail.size }}</dd>
         </dl>
         <dl class="detailModal__editionBox">
           <dt class="detailModal__editionBox--Tag">EDITION:</dt>
-          <dd class="detailModal__editionBox--Text">10</dd>
+          <dd class="detailModal__editionBox--Text">{{ this.canvasArray[this.getState].detail.edition }}</dd>
         </dl>
       </div>
     </div>
@@ -36,6 +36,58 @@
 		name: "DetailModal",
     computed: {
       ...mapState(["state", "canvasArray"]),
+      getState() {
+        let modalNum = null;
+        switch (this.state) {
+          case 'room01':
+            modalNum = 0;
+            break;
+
+          case 'room02':
+            modalNum = 1;
+            break;
+
+          case 'room03':
+            modalNum = 2;
+            break;
+
+          case 'room04':
+            modalNum = 3;
+            break;
+
+          case 'room05':
+            modalNum = 4;
+            break;
+
+          case 'room06':
+            modalNum = 5;
+            break;
+
+          case 'room07':
+            modalNum = 6;
+            break;
+
+          case 'room08':
+            modalNum = 7;
+            break;
+
+          case 'room09':
+            modalNum = 8;
+            break;
+
+          case 'room10':
+            modalNum = 9;
+            break;
+
+          case 'room11':
+            modalNum = 10;
+            break;
+
+          default:
+            break;
+        }
+        return modalNum;
+      }
     },
     data () {
       return {
@@ -43,12 +95,13 @@
       }
     },
     mounted () {
+		  this.attachEvent();
       gsap.set(".detailModal", { display: "none", opacity: 0.0 });
     },
     methods: {
       attachEvent() {
         // イベント登録
-        EventBus.$on("DETAIL_UI_VIEW", this.viewModal);
+        EventBus.$on("MODAL_BOX_VIEW", this.viewModal);
       },
       viewModal() {
         gsap.set(".detailModal", { display: "block" });

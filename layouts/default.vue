@@ -28,7 +28,7 @@
       window.addEventListener("orientationchange", this.checkOrientation, false);
     },
     mounted () {
-      this.$store.dispatch('setStateData', 'index');
+      // this.$store.dispatch('setStateData', 'index');
       // setTimeout(()=> {
         // this.$store.commit('setStateData', 'index');
       // }, 2000);

@@ -1,32 +1,296 @@
 <template>
   <div class="detailUIBox">
-    <model-viewer
-      class="reveal"
-      ar
-      ar-scale="fixed"
-      alt="Room01"
-      src="model/room1.gltf"
-      ios-src="model/room1.usdz"
-      background-color="#70BCD1"
-      shadow-intensity="0.7"
-      quick-look-browsers="safari chrome"
-      camera-controls
-      model-visibility="false"
-      interaction-prompt="none"
-      reveal="manual"
-      ar magic-leap>
-      <button class="ar-button" slot="ar-button" style="border: none;">
-        <div class="ARButton__inner">
-          <p class="ARButton__text">AR</p>
-          <div class="ARCamera__icon">
-            <ArButton/>
+    <!---->
+    <div class="model-viewerWrap" v-if="this.state === 'room01'">
+      <model-viewer
+        class="reveal"
+        ar
+        ar-scale="fixed"
+        alt="Room01"
+        src="model/room01.glb"
+        ios-src="model/room01.usdz"
+        background-color="#70BCD1"
+        shadow-intensity="0.7"
+        quick-look-browsers="safari chrome"
+        camera-controls
+        model-visibility="false"
+        interaction-prompt="none"
+        reveal="manual"
+        ar magic-leap>
+        <button class="ar-button" slot="ar-button" style="border: none;">
+          <div class="ARButton__inner">
+            <p class="ARButton__text">AR</p>
+            <div class="ARCamera__icon">
+              <ArButton/>
+            </div>
           </div>
-        </div>
-      </button>
-    </model-viewer>
+        </button>
+      </model-viewer>
+    </div>
+    <div class="model-viewerWrap" v-if="this.state === 'room02'">
+      <model-viewer
+        class="reveal"
+        ar
+        ar-scale="fixed"
+        alt="Room02"
+        src="model/room02.glb"
+        ios-src="model/room02.usdz"
+        background-color="#70BCD1"
+        shadow-intensity="0.7"
+        quick-look-browsers="safari chrome"
+        camera-controls
+        model-visibility="false"
+        interaction-prompt="none"
+        reveal="manual"
+        ar magic-leap>
+        <button class="ar-button" slot="ar-button" style="border: none;">
+          <div class="ARButton__inner">
+            <p class="ARButton__text">AR</p>
+            <div class="ARCamera__icon">
+              <ArButton/>
+            </div>
+          </div>
+        </button>
+      </model-viewer>
+    </div>
+    <div class="model-viewerWrap" v-if="this.state === 'room03'">
+      <model-viewer
+        class="reveal"
+        ar
+        ar-scale="fixed"
+        alt="Room03"
+        src="model/room03.glb"
+        ios-src="model/room03.usdz"
+        background-color="#70BCD1"
+        shadow-intensity="0.7"
+        quick-look-browsers="safari chrome"
+        camera-controls
+        model-visibility="false"
+        interaction-prompt="none"
+        reveal="manual"
+        ar magic-leap>
+        <button class="ar-button" slot="ar-button" style="border: none;">
+          <div class="ARButton__inner">
+            <p class="ARButton__text">AR</p>
+            <div class="ARCamera__icon">
+              <ArButton/>
+            </div>
+          </div>
+        </button>
+      </model-viewer>
+    </div>
+    <div class="model-viewerWrap" v-if="this.state === 'room04'">
+      <model-viewer
+        class="reveal"
+        ar
+        ar-scale="fixed"
+        alt="Room04"
+        src="model/room04.glb"
+        ios-src="model/room04.usdz"
+        background-color="#70BCD1"
+        shadow-intensity="0.7"
+        quick-look-browsers="safari chrome"
+        camera-controls
+        model-visibility="false"
+        interaction-prompt="none"
+        reveal="manual"
+        ar magic-leap>
+        <button class="ar-button" slot="ar-button" style="border: none;">
+          <div class="ARButton__inner">
+            <p class="ARButton__text">AR</p>
+            <div class="ARCamera__icon">
+              <ArButton/>
+            </div>
+          </div>
+        </button>
+      </model-viewer>
+    </div>
+    <div class="model-viewerWrap" v-if="this.state === 'room05'">
+      <model-viewer
+        class="reveal"
+        ar
+        ar-scale="fixed"
+        alt="Room05"
+        src="model/room05.glb"
+        ios-src="model/room05.usdz"
+        background-color="#70BCD1"
+        shadow-intensity="0.7"
+        quick-look-browsers="safari chrome"
+        camera-controls
+        model-visibility="false"
+        interaction-prompt="none"
+        reveal="manual"
+        ar magic-leap>
+        <button class="ar-button" slot="ar-button" style="border: none;">
+          <div class="ARButton__inner">
+            <p class="ARButton__text">AR</p>
+            <div class="ARCamera__icon">
+              <ArButton/>
+            </div>
+          </div>
+        </button>
+      </model-viewer>
+    </div>
+    <div class="model-viewerWrap" v-if="this.state === 'room06'">
+      <model-viewer
+        class="reveal"
+        ar
+        ar-scale="fixed"
+        alt="Room06"
+        src="model/room06.glb"
+        ios-src="model/room06.usdz"
+        background-color="#70BCD1"
+        shadow-intensity="0.7"
+        quick-look-browsers="safari chrome"
+        camera-controls
+        model-visibility="false"
+        interaction-prompt="none"
+        reveal="manual"
+        ar magic-leap>
+        <button class="ar-button" slot="ar-button" style="border: none;">
+          <div class="ARButton__inner">
+            <p class="ARButton__text">AR</p>
+            <div class="ARCamera__icon">
+              <ArButton/>
+            </div>
+          </div>
+        </button>
+      </model-viewer>
+    </div>
+    <div class="model-viewerWrap" v-if="this.state === 'room07'">
+      <model-viewer
+        class="reveal"
+        ar
+        ar-scale="fixed"
+        alt="Room07"
+        src="model/room07.glb"
+        ios-src="model/room07.usdz"
+        background-color="#70BCD1"
+        shadow-intensity="0.7"
+        quick-look-browsers="safari chrome"
+        camera-controls
+        model-visibility="false"
+        interaction-prompt="none"
+        reveal="manual"
+        ar magic-leap>
+        <button class="ar-button" slot="ar-button" style="border: none;">
+          <div class="ARButton__inner">
+            <p class="ARButton__text">AR</p>
+            <div class="ARCamera__icon">
+              <ArButton/>
+            </div>
+          </div>
+        </button>
+      </model-viewer>
+    </div>
+    <div class="model-viewerWrap" v-if="this.state === 'room08'">
+      <model-viewer
+        class="reveal"
+        ar
+        ar-scale="fixed"
+        alt="Room08"
+        src="model/room08.glb"
+        ios-src="model/room08.usdz"
+        background-color="#70BCD1"
+        shadow-intensity="0.7"
+        quick-look-browsers="safari chrome"
+        camera-controls
+        model-visibility="false"
+        interaction-prompt="none"
+        reveal="manual"
+        ar magic-leap>
+        <button class="ar-button" slot="ar-button" style="border: none;">
+          <div class="ARButton__inner">
+            <p class="ARButton__text">AR</p>
+            <div class="ARCamera__icon">
+              <ArButton/>
+            </div>
+          </div>
+        </button>
+      </model-viewer>
+    </div>
+    <div class="model-viewerWrap" v-if="this.state === 'room09'">
+      <model-viewer
+        class="reveal"
+        ar
+        ar-scale="fixed"
+        alt="Room09"
+        src="model/room09.glb"
+        ios-src="model/room09.usdz"
+        background-color="#70BCD1"
+        shadow-intensity="0.7"
+        quick-look-browsers="safari chrome"
+        camera-controls
+        model-visibility="false"
+        interaction-prompt="none"
+        reveal="manual"
+        ar magic-leap>
+        <button class="ar-button" slot="ar-button" style="border: none;">
+          <div class="ARButton__inner">
+            <p class="ARButton__text">AR</p>
+            <div class="ARCamera__icon">
+              <ArButton/>
+            </div>
+          </div>
+        </button>
+      </model-viewer>
+    </div>
+    <div class="model-viewerWrap" v-if="this.state === 'room10'">
+      <model-viewer
+        class="reveal"
+        ar
+        ar-scale="fixed"
+        alt="Room10"
+        src="model/room10.glb"
+        ios-src="model/room10.usdz"
+        background-color="#70BCD1"
+        shadow-intensity="0.7"
+        quick-look-browsers="safari chrome"
+        camera-controls
+        model-visibility="false"
+        interaction-prompt="none"
+        reveal="manual"
+        ar magic-leap>
+        <button class="ar-button" slot="ar-button" style="border: none;">
+          <div class="ARButton__inner">
+            <p class="ARButton__text">AR</p>
+            <div class="ARCamera__icon">
+              <ArButton/>
+            </div>
+          </div>
+        </button>
+      </model-viewer>
+    </div>
+    <div class="model-viewerWrap" v-if="this.state === 'room11'">
+      <model-viewer
+        class="reveal"
+        ar
+        ar-scale="fixed"
+        alt="Room11"
+        src="model/room11.glb"
+        ios-src="model/room11.usdz"
+        background-color="#70BCD1"
+        shadow-intensity="0.7"
+        quick-look-browsers="safari chrome"
+        camera-controls
+        model-visibility="false"
+        interaction-prompt="none"
+        reveal="manual"
+        ar magic-leap>
+        <button class="ar-button" slot="ar-button" style="border: none;">
+          <div class="ARButton__inner">
+            <p class="ARButton__text">AR</p>
+            <div class="ARCamera__icon">
+              <ArButton/>
+            </div>
+          </div>
+        </button>
+      </model-viewer>
+    </div>
+    <!---->
     <div class="buy__button">
       <div class="buy__button--inner">
-        <a :href="this.canvasArray[0].buyLink" target="_blank">
+        <a :href="this.buyLink" target="_blank">
           <p class="buy__button--text">BUY</p>
           <div class="cart__icon">
             <CartButton></CartButton>
@@ -62,14 +326,11 @@
     },
     data() {
       return {
-
+        buyLink : ''
       }
     },
     computed: {
-      ...mapState(["state", "canvasArray"]),
-      // getBuyLink(canvasNum) {
-      //   return this.canvasArray[canvasNum].buyLink;
-      // }
+      ...mapState(["state", "canvasArray"])
     },
     created() {
 
@@ -78,13 +339,14 @@
 
     },
     mounted() {
-
+      this.attachEvent();
     },
     methods: {
       attachEvent() {
         // イベント登録
         EventBus.$on("DETAIL_UI_VIEW", this.viewDetailUIBox);
         EventBus.$on("DETAIL_UI_HIDE", this.hideDetailUIBox);
+        EventBus.$on("SET_BUY_LINK", this.setBuyLink);
       },
       viewDetailUIBox() {
         gsap.set(".detailUIBox", { display: "block" });
@@ -105,7 +367,57 @@
         });
       },
       viewModalEvent() {
-        EventBus.$emit("DETAIL_UI_VIEW");
+        EventBus.$emit("MODAL_BOX_VIEW");
+      },
+      setBuyLink(stateName) {
+        switch (stateName) {
+          case 'room01':
+            this.buyLink = this.canvasArray[0].buyLink;
+            break;
+
+          case 'room02':
+            this.buyLink = this.canvasArray[1].buyLink;
+            break;
+
+          case 'room03':
+            this.buyLink = this.canvasArray[2].buyLink;
+            break;
+
+          case 'room04':
+            this.buyLink = this.canvasArray[3].buyLink;
+            break;
+
+          case 'room05':
+            this.buyLink = this.canvasArray[4].buyLink;
+            break;
+
+          case 'room06':
+            this.buyLink = this.canvasArray[5].buyLink;
+            break;
+
+          case 'room07':
+            this.buyLink = this.canvasArray[6].buyLink;
+            break;
+
+          case 'room08':
+            this.buyLink = this.canvasArray[7].buyLink;
+            break;
+
+          case 'room09':
+            this.buyLink = this.canvasArray[8].buyLink;
+            break;
+
+          case 'room10':
+            this.buyLink = this.canvasArray[9].buyLink;
+            break;
+
+          case 'room11':
+            this.buyLink = this.canvasArray[10].buyLink;
+            break;
+
+          default:
+            break;
+        }
       }
     }
   }
@@ -125,6 +437,9 @@
       /*opacity: 0;*/
     }
 
+    .model-viewerWrap {
+
+    }
     .reveal {
       width: get-vw(140px);
       height: get-vw(140px);
