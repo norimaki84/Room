@@ -6,26 +6,32 @@
     <nuxt />
     <div class="landscapeBox">
       <div class="landscapeBox__inner">
-        test
+        <p>縦で視聴ください</p>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-  import EventBus from "~/utils/event-bus";
+  import gsap from "gsap";
+  import { mapState } from 'vuex';
   import WebglCanvas from "~/components/views/webgl/WebglCanvas";
-  import gsap from "gsap"
 
   export default {
     components: {
       WebglCanvas,
     },
+    computed: {
+      ...mapState(["state"]),
+    },
     beforeMount () {
       window.addEventListener("orientationchange", this.checkOrientation, false);
     },
     mounted () {
-
+      this.$store.dispatch('setStateData', 'index');
+      // setTimeout(()=> {
+        // this.$store.commit('setStateData', 'index');
+      // }, 2000);
     },
     methods: {
       // デバイスの向きをチェック

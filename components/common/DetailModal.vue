@@ -29,11 +29,13 @@
 
 <script>
   import gsap from "gsap";
+  import { mapState } from 'vuex';
+  import EventBus from "~/utils/event-bus";
 
 	export default {
 		name: "DetailModal",
-    components: {
-     
+    computed: {
+      ...mapState(["state", "canvasArray"]),
     },
     data () {
       return {
@@ -44,6 +46,18 @@
       gsap.set(".detailModal", { display: "none", opacity: 0.0 });
     },
     methods: {
+      attachEvent() {
+        // イベント登録
+        EventBus.$on("DETAIL_UI_VIEW", this.viewModal);
+      },
+      viewModal() {
+        gsap.set(".detailModal", { display: "block" });
+        gsap.to(".detailModal", {
+          duration: 0.4,
+          opacity: 1.0,
+          ease: "power2.in"
+        });
+      },
 		  closeModal() {
         gsap.to(".detailModal", {
           duration: 0.6,
