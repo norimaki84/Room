@@ -1,5 +1,8 @@
 <template>
   <div class="container">
+    <client-only>
+      <WebglCanvas></WebglCanvas>
+    </client-only>
     <div class="enterSection">
       <div class="enterSection__content">
         <h1 class="enterSection__mainTitle"><MainLogo></MainLogo></h1>
@@ -19,6 +22,7 @@
 
 <script>
   import EventBus from "~/utils/event-bus";
+  import WebglCanvas from "~/components/views/webgl/WebglCanvas";
   import MainLogo from '@/assets/svg/logo_01.svg';
   import Header from '../components/common/Header';
   import ControlBox from '../components/common/ControlBox';
@@ -27,6 +31,7 @@
 
   export default {
     components: {
+      WebglCanvas,
       Header,
       ControlBox,
       MainLogo,

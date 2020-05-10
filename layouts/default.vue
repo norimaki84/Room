@@ -1,8 +1,5 @@
 <template>
   <div>
-    <client-only>
-      <WebglCanvas></WebglCanvas>
-    </client-only>
     <nuxt />
     <div class="landscapeBox">
       <div class="landscapeBox__inner">
@@ -15,11 +12,9 @@
 <script>
   import gsap from "gsap";
   import { mapState } from 'vuex';
-  import WebglCanvas from "~/components/views/webgl/WebglCanvas";
 
   export default {
     components: {
-      WebglCanvas,
     },
     computed: {
       ...mapState(["state"]),
