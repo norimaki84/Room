@@ -102,18 +102,25 @@ export const state = () => ({
         edition: '11'
       }
     }
-  ]
+  ],
+  deviceType : null
 });
 
 export const mutations = {
   updateStateData(state, value) {
     state.state = value
   },
+  updateDeviceType(state, value) {
+    state.deviceType = value
+  }
 };
 
 export const actions = {
   setStateData({commit, state}, value) {
     commit('updateStateData', value);
+  },
+  setDeviceType({commit, state}, value) {
+    commit('updateDeviceType', value);
   }
 };
 

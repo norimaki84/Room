@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <client-only>
-      <WebglCanvas></WebglCanvas>
+      <WebglCanvas v-if="this.getDeviceType === 'sp'"></WebglCanvas>
     </client-only>
     <div class="enterSection">
       <div class="enterSection__content">
@@ -22,6 +22,7 @@
 
 <script>
   import EventBus from "~/utils/event-bus";
+  import { mapState } from 'vuex';
   import WebglCanvas from "~/components/views/webgl/WebglCanvas";
   import MainLogo from '@/assets/svg/logo_01.svg';
   import Header from '../components/common/Header';
@@ -44,7 +45,10 @@
       }
     },
     computed: {
-
+      ...mapState(["state", "deviceType"]),
+      getDeviceType() {
+        return this.deviceType;
+      }
     },
     created() {
 

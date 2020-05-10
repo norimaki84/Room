@@ -89,7 +89,6 @@ class CommonGL {
    * @private
    */
   _onResize() {
-    console.log('onResize');
     this.setSize();
     this.camera.aspect = this.size.windowWidth / this.size.windowHeight;
     this.camera.updateProjectionMatrix();

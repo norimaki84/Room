@@ -32,14 +32,39 @@ export default class CameraUtils {
     this.cameraControls.truckSpeed = 1 / EPS * 3;
     this.cameraControls.mouseButtons.wheel = CameraControls.ACTION.ZOOM;
     this.cameraControls.touches.two = CameraControls.ACTION.TOUCH_ZOOM_TRUCK;
+    this.cameraControls.moveTo(0, 150, 0, false);
     // this.cameraControls.setTarget( 494, 150, 300, true );
-    this.cameraControls.moveTo(0, 150, 0, false );
     // this.cameraControls.dollyTo(0.0001, true);
     // this.cameraControls.minDistance = 0;
     // this.cameraControls.maxDistance = 0;
 
 
     this.cameraControls.saveState();
+
+    // this.cameraControls.addEventListener('controlstart', ()=> {
+    //   console.log('controlstart');
+    // });
+    //
+    // this.cameraControls.addEventListener('control', ()=> {
+    //   console.log('control');
+    // });
+    //
+    // this.cameraControls.addEventListener('controlend', ()=> {
+    //   console.log('controlend');
+    // });
+
+    // this.cameraControls.addEventListener('update', ()=> {
+    //   console.log('update');
+    // });
+    //
+    // this.cameraControls.addEventListener('awake', ()=> {
+    //   console.log('awake');
+    // });
+    //
+    // this.cameraControls.addEventListener('sleep', ()=> {
+    //   console.log('sleep');
+    // });
+
 
     setTimeout( ()=> {
       this.cameraControls.moveTo( -295, 150, -400, true );
@@ -49,8 +74,13 @@ export default class CameraUtils {
     }, 2000);
     // =================
 
+
   }
 
+  /**
+   * EventEmitter用のイベント登録
+   * @private
+   */
   _attachEvent() {
     EventBus.$on("SWITCH_POSITION", this.switchPosition.bind(this));
   }
