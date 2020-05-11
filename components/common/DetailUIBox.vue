@@ -343,10 +343,11 @@
       this.attachEvent();
     },
     methods: {
+      // EventEmitter用のイベント登録
       attachEvent() {
-        // イベント登録
-        // EventBus.$on("DETAIL_UI_VIEW", this.viewDetailUIBox);
-        // EventBus.$on("DETAIL_UI_HIDE", this.hideDetailUIBox);
+        EventBus.$on("DETAIL_UI_VIEW", this.viewDetailUIBox);
+        EventBus.$on("DETAIL_UI_HIDE", this.hideDetailUIBox);
+        EventBus.$on("VIEW_CHANGE_DETAIL_UI", this.viewChangeDetailUIBox);
         EventBus.$on("CHECK_DETAIL_UI_BOX", this.checkDetailUIBox);
         EventBus.$on("SET_BUY_LINK", this.setBuyLink);
       },
@@ -357,9 +358,34 @@
           this.viewDetailUIBox();
         }
       },
+      viewChangeDetailUIBox() {
+        if(!this.isDetailUIBox) {
+          this.viewDetailUIBox();
+        } else {
+          let tl = gsap.timeline();
+          tl
+            .to('.detailUIBox', {
+              duration: 0.8,
+              opacity: 0.0,
+              y: 0,
+              ease: "power2.in"
+            })
+            .to('.detailUIBox', {
+              duration: 0.8,
+              opacity: 1.0,
+              ease: "power2.inOut",
+              onComplete: ()=>{
+                if(!this.isDetailUIBox) {
+                  this.isDetailUIBox = true;
+                }
+              }
+            });
+        }
+      },
       viewDetailUIBox() {
         gsap.set(".detailUIBox", { display: "block" });
         gsap.to(".detailUIBox", {
+          delay: 1.5,
           duration: 0.4,
           opacity: 1.0,
           ease: "power2.in",
@@ -374,7 +400,8 @@
           opacity: 0.0,
           ease: "power2.in",
           onComplete: ()=> {
-            gsap.set(".detailUIBox", { display: "none" });
+            // gsap.set(".detailUIBox", { display: "none" });
+            this.isDetailUIBox = false;
           }
         });
       },

@@ -19,6 +19,7 @@
 
 <script>
   import EventBus from "~/utils/event-bus";
+  import gsap from "gsap"
 
   export default {
     name: 'ControlBox',
@@ -40,90 +41,104 @@
 
     },
     mounted () {
-
+      this.attachEvent();
     },
     methods: {
+      // EventEmitter用のイベント登録
+      attachEvent() {
+        EventBus.$on("VIEW_CONTROL_BOX", this.viewControlBox);
+      },
+      // コントロールボックスを表示
+      viewControlBox() {
+        gsap.to(".controlBox", {
+          duration: 1.0,
+          opacity: 1.0,
+          ease: "power2.inOut",
+        });
+      },
+      // ナビのクリックイベント
       clickNav(canvasString) {
         switch (canvasString) {
           case '1':
             EventBus.$emit("SWITCH_POSITION", '1');
             EventBus.$emit("SET_BUY_LINK", 'room01');
             this.$store.dispatch('setStateData', 'room01');
-            setTimeout(()=>{
-              EventBus.$emit("CHECK_DETAIL_UI_BOX");
-            }, 1500);
+            EventBus.$emit("VIEW_CHANGE_DETAIL_UI");
             break;
 
           case '2':
             EventBus.$emit("SWITCH_POSITION", '2');
             EventBus.$emit("SET_BUY_LINK", 'room02');
             this.$store.dispatch('setStateData', 'room02');
+            EventBus.$emit("VIEW_CHANGE_DETAIL_UI");
             break;
 
           case '3':
             EventBus.$emit("SWITCH_POSITION", '3');
             EventBus.$emit("SET_BUY_LINK", 'room03');
             this.$store.dispatch('setStateData', 'room03');
+            EventBus.$emit("VIEW_CHANGE_DETAIL_UI");
             break;
 
           case '4':
             EventBus.$emit("SWITCH_POSITION", '4');
             EventBus.$emit("SET_BUY_LINK", 'room04');
             this.$store.dispatch('setStateData', 'room04');
+            EventBus.$emit("VIEW_CHANGE_DETAIL_UI");
             break;
 
           case '5':
             EventBus.$emit("SWITCH_POSITION", '5');
             EventBus.$emit("SET_BUY_LINK", 'room05');
             this.$store.dispatch('setStateData', 'room05');
+            EventBus.$emit("VIEW_CHANGE_DETAIL_UI");
             break;
 
           case '6':
             EventBus.$emit("SWITCH_POSITION", '6');
             EventBus.$emit("SET_BUY_LINK", 'room06');
             this.$store.dispatch('setStateData', 'room06');
+            EventBus.$emit("VIEW_CHANGE_DETAIL_UI");
             break;
 
           case '7':
             EventBus.$emit("SWITCH_POSITION", '7');
             EventBus.$emit("SET_BUY_LINK", 'room07');
             this.$store.dispatch('setStateData', 'room07');
+            EventBus.$emit("VIEW_CHANGE_DETAIL_UI");
             break;
 
           case '8':
             EventBus.$emit("SWITCH_POSITION", '8');
             EventBus.$emit("SET_BUY_LINK", 'room08');
             this.$store.dispatch('setStateData', 'room08');
+            EventBus.$emit("VIEW_CHANGE_DETAIL_UI");
             break;
 
           case '9':
             EventBus.$emit("SWITCH_POSITION", '9');
             EventBus.$emit("SET_BUY_LINK", 'room09');
             this.$store.dispatch('setStateData', 'room09');
+            EventBus.$emit("VIEW_CHANGE_DETAIL_UI");
             break;
 
           case '10':
             EventBus.$emit("SWITCH_POSITION", '10');
             EventBus.$emit("SET_BUY_LINK", 'room10');
             this.$store.dispatch('setStateData', 'room10');
+            EventBus.$emit("VIEW_CHANGE_DETAIL_UI");
             break;
 
           case '11':
             EventBus.$emit("SWITCH_POSITION", '11');
             EventBus.$emit("SET_BUY_LINK", 'room11');
             this.$store.dispatch('setStateData', 'room11');
+            EventBus.$emit("VIEW_CHANGE_DETAIL_UI");
             break;
 
           case 'About':
             EventBus.$emit("SWITCH_POSITION", 'About');
-            break;
-
-          case 'Door':
-            EventBus.$emit("SWITCH_POSITION", 'Door');
-            break;
-
-          case 'Reset':
-            EventBus.$emit("SWITCH_POSITION", 'Reset');
+            EventBus.$emit("DETAIL_UI_HIDE");
             break;
 
           default:
@@ -150,6 +165,7 @@
       bottom: 0;
       left: 0;
       z-index: 10;
+      opacity: 0.0;
       border-top: get-vw(2px) solid #c0c0c0;
     }
     .controlBox__nav {

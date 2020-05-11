@@ -99,10 +99,11 @@
       gsap.set(".detailModal", { display: "none", opacity: 0.0 });
     },
     methods: {
+      // EventEmitter用のイベント登録
       attachEvent() {
-        // イベント登録
         EventBus.$on("MODAL_BOX_VIEW", this.viewModal);
       },
+      // モーダルを表示
       viewModal() {
         gsap.set(".detailModal", { display: "block" });
         gsap.to(".detailModal", {
@@ -111,6 +112,7 @@
           ease: "power2.in"
         });
       },
+      // モーダルを非表示
 		  closeModal() {
         gsap.to(".detailModal", {
           duration: 0.6,

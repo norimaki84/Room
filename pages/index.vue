@@ -6,7 +6,7 @@
     <div class="enterSection">
       <div class="enterSection__content">
         <h1 class="enterSection__mainTitle"><MainLogo></MainLogo></h1>
-        <div class="enterSection__startButton">
+        <div class="enterSection__startButton" @click="hideEnterSection">
           <p class="enterSection__startButton--text">ENTER</p>
           <div class="enterSection__startButton--border"></div>
         </div>
@@ -21,6 +21,7 @@
 </template>
 
 <script>
+  import gsap from "gsap";
   import EventBus from "~/utils/event-bus";
   import { mapState } from 'vuex';
   import WebglCanvas from "~/components/views/webgl/WebglCanvas";
@@ -57,10 +58,71 @@
 
     },
     mounted() {
-
+      this.domInit();
+      this.openingEnterSectionAnimation();
     },
     methods: {
-
+      domInit() {
+        gsap.set(".enterSection__mainTitle", { opacity: 0.0, y: 10 });
+        gsap.set(".enterSection__startButton", { opacity: 0.0, y: 10 });
+        gsap.set(".enterSection__description", { opacity: 0.0, y: 10 });
+      },
+      openingEnterSectionAnimation() {
+        let tl = gsap.timeline();
+        tl
+          .to('.enterSection__mainTitle', {
+            delay: 0.5,
+            duration: 0.6,
+            opacity: 1.0,
+            y: 0,
+            ease: "power2.inOut"
+          })
+          .to('.enterSection__startButton', {
+            duration: 0.6,
+            opacity: 1.0,
+            y: 0,
+            ease: "power2.inOut"
+          }, "-=0.4")
+          .to('.enterSection__description', {
+            duration: 0.6,
+            opacity: 1.0,
+            y: 0,
+            ease: "power2.inOut"
+          }, "-=0.4");
+      },
+      hideEnterSection() {
+        let tl = gsap.timeline();
+        tl
+          .to('.enterSection__mainTitle', {
+            duration: 0.6,
+            opacity: 0.0,
+            y: -10,
+            ease: "power2.in"
+          })
+          .to('.enterSection__startButton', {
+            duration: 0.6,
+            opacity: 0.0,
+            y: -10,
+            ease: "power2.in"
+          }, "-=0.4")
+          .to('.enterSection__description', {
+            duration: 0.6,
+            opacity: 0.0,
+            y: -10,
+            ease: "power2.in"
+          }, "-=0.4")
+          .to('.enterSection', {
+            duration: 0.6,
+            opacity: 0.0,
+            ease: "power2.in",
+            onComplete: ()=> {
+              gsap.set(".enterSection", { display: "none" });
+              EventBus.$emit("FIRST_CAMERA_ANIMATION");
+              EventBus.$emit("FADEIN_CANVAS");
+              // this.$store.commit('SET_isFirstQuiz', true);
+            }
+          });
+      }
     }
   }
 </script>
@@ -98,8 +160,8 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      opacity: 0.0; // TODO
-      display: none; // TODO
+      /*opacity: 0.0; // TODO*/
+      /*display: none; // TODO*/
     }
     .enterSection__content {}
     .enterSection__mainTitle {

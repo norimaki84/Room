@@ -43,9 +43,6 @@ export default class CameraUtils {
     // this.cameraControls.minDistance = 10;
     // this.cameraControls.maxDistance = 50;
 
-
-
-
     // this.cameraControls.addEventListener('controlstart', ()=> {
     //   console.log('controlstart');
     // });
@@ -71,7 +68,6 @@ export default class CameraUtils {
     // });
     // =================
 
-    this.firstCameraAnimation();
   }
 
   /**
@@ -80,6 +76,7 @@ export default class CameraUtils {
    */
   _attachEvent() {
     EventBus.$on("SWITCH_POSITION", this.switchPosition.bind(this));
+    EventBus.$on("FIRST_CAMERA_ANIMATION", this.firstCameraAnimation.bind(this));
   }
 
   /**
@@ -87,12 +84,10 @@ export default class CameraUtils {
    * @private
    */
   _firstCameraAnimation() {
-    setTimeout( ()=> {
-      this.cameraControls.moveTo( -295, 150, -400, true );
-      this.cameraControls.setTarget( 195, 150, 50, true );
-      // this.cameraControls.zoomTo( 1.0, true );
-      this.cameraControls.dollyTo(0.0001, true );
-    }, 2000);
+    this.cameraControls.moveTo( -295, 150, -400, true );
+    this.cameraControls.setTarget( 195, 150, 50, true );
+    this.cameraControls.zoomTo( 1.0, true );
+    this.cameraControls.dollyTo(0.0001, true );
   }
 
   /**
@@ -182,20 +177,6 @@ export default class CameraUtils {
       case 'About':
         this.cameraControls.moveTo( 178, 150, 300, true );
         this.cameraControls.setTarget( 195, 150, 300, true );
-        this.cameraControls.zoomTo( 1.0, true );
-        this.cameraControls.dollyTo(0.0001, true );
-        break;
-
-      case 'Door':
-        this.cameraControls.moveTo( 190, 150, 0, true );
-        this.cameraControls.setTarget( 207, 150, 0, true );
-        this.cameraControls.zoomTo( 1.0, true );
-        this.cameraControls.dollyTo(0.0001, true );
-        break;
-
-      case 'Reset':
-        this.cameraControls.moveTo( -295, 150, -400, true );
-        this.cameraControls.setTarget( 195, 150, 50, true );
         this.cameraControls.zoomTo( 1.0, true );
         this.cameraControls.dollyTo(0.0001, true );
         break;
