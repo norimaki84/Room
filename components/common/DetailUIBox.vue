@@ -326,7 +326,8 @@
     },
     data() {
       return {
-        buyLink : ''
+        buyLink : '',
+        isDetailUIBox : false
       }
     },
     computed: {
@@ -344,16 +345,27 @@
     methods: {
       attachEvent() {
         // イベント登録
-        EventBus.$on("DETAIL_UI_VIEW", this.viewDetailUIBox);
-        EventBus.$on("DETAIL_UI_HIDE", this.hideDetailUIBox);
+        // EventBus.$on("DETAIL_UI_VIEW", this.viewDetailUIBox);
+        // EventBus.$on("DETAIL_UI_HIDE", this.hideDetailUIBox);
+        EventBus.$on("CHECK_DETAIL_UI_BOX", this.checkDetailUIBox);
         EventBus.$on("SET_BUY_LINK", this.setBuyLink);
+      },
+      checkDetailUIBox() {
+        if(this.isDetailUIBox) {
+
+        } else {
+          this.viewDetailUIBox();
+        }
       },
       viewDetailUIBox() {
         gsap.set(".detailUIBox", { display: "block" });
         gsap.to(".detailUIBox", {
           duration: 0.4,
           opacity: 1.0,
-          ease: "power2.in"
+          ease: "power2.in",
+          onComplete: ()=> {
+            this.isDetailUIBox = true;
+          }
         });
       },
       hideDetailUIBox() {
@@ -433,8 +445,8 @@
       right: 0;
       overflow: hidden;
       z-index: 100;
-      /*display: none;*/
-      /*opacity: 0;*/
+      display: none;
+      opacity: 0;
     }
 
     .model-viewerWrap {

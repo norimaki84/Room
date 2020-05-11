@@ -11,6 +11,7 @@ export default class CameraUtils {
     this._domElement = domElement;
 
     this.attachEvent = this._attachEvent.bind(this);
+    this.firstCameraAnimation = this._firstCameraAnimation.bind(this);
     this.switchPosition = this._switchPosition.bind(this);
 
     this.init();
@@ -25,6 +26,7 @@ export default class CameraUtils {
     this.attachEvent();
 
     // =================
+    // camera-controlsの設定郡
     const EPS = 1e-5;
     this.cameraControls = new CameraControls( this._camera, this._domElement );
     this.cameraControls.azimuthRotateSpeed = - 0.3; // negative value to invert rotation direction
@@ -32,14 +34,17 @@ export default class CameraUtils {
     this.cameraControls.truckSpeed = 1 / EPS * 3;
     this.cameraControls.mouseButtons.wheel = CameraControls.ACTION.ZOOM;
     this.cameraControls.touches.two = CameraControls.ACTION.TOUCH_ZOOM_TRUCK;
-    this.cameraControls.moveTo(0, 150, 0, false);
+    this.cameraControls.minZoom = 1; // zoomの最小値
+    this.cameraControls.maxZoom = 3; // zoomの最大値
+    this.cameraControls.moveTo(0, 150, 0, false);　// 初期カメラ位置
+    this.cameraControls.saveState();
     // this.cameraControls.setTarget( 494, 150, 300, true );
     // this.cameraControls.dollyTo(0.0001, true);
-    // this.cameraControls.minDistance = 0;
-    // this.cameraControls.maxDistance = 0;
+    // this.cameraControls.minDistance = 10;
+    // this.cameraControls.maxDistance = 50;
 
 
-    this.cameraControls.saveState();
+
 
     // this.cameraControls.addEventListener('controlstart', ()=> {
     //   console.log('controlstart');
@@ -64,17 +69,9 @@ export default class CameraUtils {
     // this.cameraControls.addEventListener('sleep', ()=> {
     //   console.log('sleep');
     // });
-
-
-    setTimeout( ()=> {
-      this.cameraControls.moveTo( -295, 150, -400, true );
-      this.cameraControls.setTarget( 195, 150, 50, true );
-      this.cameraControls.zoomTo( 1.0, true );
-      this.cameraControls.dollyTo(0.0001, true );
-    }, 2000);
     // =================
 
-
+    this.firstCameraAnimation();
   }
 
   /**
@@ -83,6 +80,19 @@ export default class CameraUtils {
    */
   _attachEvent() {
     EventBus.$on("SWITCH_POSITION", this.switchPosition.bind(this));
+  }
+
+  /**
+   * 初回のカメラワークアニメーション
+   * @private
+   */
+  _firstCameraAnimation() {
+    setTimeout( ()=> {
+      this.cameraControls.moveTo( -295, 150, -400, true );
+      this.cameraControls.setTarget( 195, 150, 50, true );
+      // this.cameraControls.zoomTo( 1.0, true );
+      this.cameraControls.dollyTo(0.0001, true );
+    }, 2000);
   }
 
   /**
@@ -200,6 +210,8 @@ export default class CameraUtils {
    * @param timeDelta
    */
   update(timeDelta){
+    // console.log("this.cameraControls.zoom ", this.cameraControls.zoom);
+
     this.cameraControls.update( timeDelta );
   }
 

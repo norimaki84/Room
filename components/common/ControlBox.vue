@@ -49,6 +49,9 @@
             EventBus.$emit("SWITCH_POSITION", '1');
             EventBus.$emit("SET_BUY_LINK", 'room01');
             this.$store.dispatch('setStateData', 'room01');
+            setTimeout(()=>{
+              EventBus.$emit("CHECK_DETAIL_UI_BOX");
+            }, 1500);
             break;
 
           case '2':
