@@ -35,14 +35,15 @@ export default class LightsUtils {
   _init() {
 
     // 環境光を設定
-    let ambientLight = new THREE.AmbientLight( 0xffffff, 0.95 ); // soft white light
+    let ambientLight = new THREE.AmbientLight( 0xffffff, 1.0 ); // soft white light
     // light.color.setHSL(0.1, 1, 0.95);
     // let light = new THREE.AmbientLight( 0x666666, 1.0 ); // soft white light
     // let light = new THREE.AmbientLight( 0xe5e5e5, 0.5 ); // soft white light
     CommonGL.scene.add(ambientLight);
 
     // スポットライトの色を指定
-    let spotLightColor = 0xa7db6e;
+    // let spotLightColor = 0xa7db6e;
+    let spotLightColor = 0xffffff;
     let intensity = 1.1;
     let distance = 556;
     let angle = 0.34;

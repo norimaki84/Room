@@ -62,6 +62,7 @@
           case '1':
             EventBus.$emit("SWITCH_POSITION", '1');
             EventBus.$emit("SET_BUY_LINK", 'room01');
+            EventBus.$emit("CHANGE_MODEL_VIEWER", '1');
             this.$store.dispatch('setStateData', 'room01');
             EventBus.$emit("VIEW_CHANGE_DETAIL_UI");
             break;
@@ -69,6 +70,7 @@
           case '2':
             EventBus.$emit("SWITCH_POSITION", '2');
             EventBus.$emit("SET_BUY_LINK", 'room02');
+            EventBus.$emit("CHANGE_MODEL_VIEWER", '2');
             this.$store.dispatch('setStateData', 'room02');
             EventBus.$emit("VIEW_CHANGE_DETAIL_UI");
             break;
@@ -76,6 +78,7 @@
           case '3':
             EventBus.$emit("SWITCH_POSITION", '3');
             EventBus.$emit("SET_BUY_LINK", 'room03');
+            EventBus.$emit("CHANGE_MODEL_VIEWER", '3');
             this.$store.dispatch('setStateData', 'room03');
             EventBus.$emit("VIEW_CHANGE_DETAIL_UI");
             break;
@@ -83,6 +86,7 @@
           case '4':
             EventBus.$emit("SWITCH_POSITION", '4');
             EventBus.$emit("SET_BUY_LINK", 'room04');
+            EventBus.$emit("CHANGE_MODEL_VIEWER", '4');
             this.$store.dispatch('setStateData', 'room04');
             EventBus.$emit("VIEW_CHANGE_DETAIL_UI");
             break;
@@ -90,6 +94,7 @@
           case '5':
             EventBus.$emit("SWITCH_POSITION", '5');
             EventBus.$emit("SET_BUY_LINK", 'room05');
+            EventBus.$emit("CHANGE_MODEL_VIEWER", '5');
             this.$store.dispatch('setStateData', 'room05');
             EventBus.$emit("VIEW_CHANGE_DETAIL_UI");
             break;
@@ -97,6 +102,7 @@
           case '6':
             EventBus.$emit("SWITCH_POSITION", '6');
             EventBus.$emit("SET_BUY_LINK", 'room06');
+            EventBus.$emit("CHANGE_MODEL_VIEWER", '6');
             this.$store.dispatch('setStateData', 'room06');
             EventBus.$emit("VIEW_CHANGE_DETAIL_UI");
             break;
@@ -104,6 +110,7 @@
           case '7':
             EventBus.$emit("SWITCH_POSITION", '7');
             EventBus.$emit("SET_BUY_LINK", 'room07');
+            EventBus.$emit("CHANGE_MODEL_VIEWER", '7');
             this.$store.dispatch('setStateData', 'room07');
             EventBus.$emit("VIEW_CHANGE_DETAIL_UI");
             break;
@@ -111,6 +118,7 @@
           case '8':
             EventBus.$emit("SWITCH_POSITION", '8');
             EventBus.$emit("SET_BUY_LINK", 'room08');
+            EventBus.$emit("CHANGE_MODEL_VIEWER", '8');
             this.$store.dispatch('setStateData', 'room08');
             EventBus.$emit("VIEW_CHANGE_DETAIL_UI");
             break;
@@ -118,6 +126,7 @@
           case '9':
             EventBus.$emit("SWITCH_POSITION", '9');
             EventBus.$emit("SET_BUY_LINK", 'room09');
+            EventBus.$emit("CHANGE_MODEL_VIEWER", '9');
             this.$store.dispatch('setStateData', 'room09');
             EventBus.$emit("VIEW_CHANGE_DETAIL_UI");
             break;
@@ -125,6 +134,7 @@
           case '10':
             EventBus.$emit("SWITCH_POSITION", '10');
             EventBus.$emit("SET_BUY_LINK", 'room10');
+            EventBus.$emit("CHANGE_MODEL_VIEWER", '10');
             this.$store.dispatch('setStateData', 'room10');
             EventBus.$emit("VIEW_CHANGE_DETAIL_UI");
             break;
@@ -132,6 +142,7 @@
           case '11':
             EventBus.$emit("SWITCH_POSITION", '11');
             EventBus.$emit("SET_BUY_LINK", 'room11');
+            EventBus.$emit("CHANGE_MODEL_VIEWER", '11');
             this.$store.dispatch('setStateData', 'room11');
             EventBus.$emit("VIEW_CHANGE_DETAIL_UI");
             break;

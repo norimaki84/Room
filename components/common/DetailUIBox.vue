@@ -1,291 +1,282 @@
 <template>
   <div class="detailUIBox">
     <!---->
-    <div class="model-viewerWrap" v-if="this.state === 'room01'">
-      <model-viewer
-        class="reveal"
-        ar
-        ar-scale="fixed"
-        alt="Room"
-        src="model/room01.glb"
-        ios-src="model/room01.usdz"
-        background-color="#70BCD1"
-        shadow-intensity="0.7"
-        quick-look-browsers="safari chrome"
-        camera-controls
-        model-visibility="false"
-        interaction-prompt="none"
-        reveal="manual"
-        ar magic-leap>
-        <button class="ar-button" slot="ar-button" style="border: none;">
-          <div class="ARButton__inner">
-            <p class="ARButton__text">AR</p>
-            <div class="ARCamera__icon">
-              <ArButton/>
+    <div class="model-viewerWrap">
+      <div class="model-viewer01" v-bind:class="{ active01: isActive01 }">
+        <model-viewer
+          class="reveal"
+          ar
+          ar-scale="fixed"
+          alt="Room"
+          src="model/room01.glb"
+          ios-src="model/room01.usdz"
+          background-color="#70BCD1"
+          shadow-intensity="0.7"
+          quick-look-browsers="safari chrome"
+          camera-controls
+          interaction-prompt="none"
+          reveal="manual"
+          ar magic-leap>
+          <button class="ar-button" slot="ar-button" style="border: none;">
+            <div class="ARButton__inner">
+              <p class="ARButton__text">AR</p>
+              <div class="ARCamera__icon">
+                <ArButton/>
+              </div>
             </div>
-          </div>
-        </button>
-      </model-viewer>
-    </div>
-    <div class="model-viewerWrap" v-if="this.state === 'room02'">
-      <model-viewer
-        class="reveal"
-        ar
-        ar-scale="fixed"
-        alt="hope"
-        src="model/room02.glb"
-        ios-src="model/room02.usdz"
-        background-color="#70BCD1"
-        shadow-intensity="0.7"
-        quick-look-browsers="safari chrome"
-        camera-controls
-        model-visibility="false"
-        interaction-prompt="none"
-        reveal="manual"
-        ar magic-leap>
-        <button class="ar-button" slot="ar-button" style="border: none;">
-          <div class="ARButton__inner">
-            <p class="ARButton__text">AR</p>
-            <div class="ARCamera__icon">
-              <ArButton/>
+          </button>
+        </model-viewer>
+      </div>
+      <div class="model-viewer02" v-bind:class="{ active02: isActive02 }">
+        <model-viewer
+          class="reveal"
+          ar
+          ar-scale="fixed"
+          alt="hope"
+          src="model/room02.glb"
+          ios-src="model/room02.usdz"
+          background-color="#70BCD1"
+          shadow-intensity="0.7"
+          quick-look-browsers="safari chrome"
+          camera-controls
+          interaction-prompt="none"
+          reveal="manual"
+          ar magic-leap>
+          <button class="ar-button" slot="ar-button" style="border: none;">
+            <div class="ARButton__inner">
+              <p class="ARButton__text">AR</p>
+              <div class="ARCamera__icon">
+                <ArButton/>
+              </div>
             </div>
-          </div>
-        </button>
-      </model-viewer>
-    </div>
-    <div class="model-viewerWrap" v-if="this.state === 'room03'">
-      <model-viewer
-        class="reveal"
-        ar
-        ar-scale="fixed"
-        alt="self"
-        src="model/room03.glb"
-        ios-src="model/room03.usdz"
-        background-color="#70BCD1"
-        shadow-intensity="0.7"
-        quick-look-browsers="safari chrome"
-        camera-controls
-        model-visibility="false"
-        interaction-prompt="none"
-        reveal="manual"
-        ar magic-leap>
-        <button class="ar-button" slot="ar-button" style="border: none;">
-          <div class="ARButton__inner">
-            <p class="ARButton__text">AR</p>
-            <div class="ARCamera__icon">
-              <ArButton/>
+          </button>
+        </model-viewer>
+      </div>
+      <div class="model-viewer03" v-bind:class="{ active03: isActive03 }">
+        <model-viewer
+          class="reveal"
+          ar
+          ar-scale="fixed"
+          alt="self"
+          src="model/room03.glb"
+          ios-src="model/room03.usdz"
+          background-color="#70BCD1"
+          shadow-intensity="0.7"
+          quick-look-browsers="safari chrome"
+          camera-controls
+          interaction-prompt="none"
+          reveal="manual"
+          ar magic-leap>
+          <button class="ar-button" slot="ar-button" style="border: none;">
+            <div class="ARButton__inner">
+              <p class="ARButton__text">AR</p>
+              <div class="ARCamera__icon">
+                <ArButton/>
+              </div>
             </div>
-          </div>
-        </button>
-      </model-viewer>
-    </div>
-    <div class="model-viewerWrap" v-if="this.state === 'room04'">
-      <model-viewer
-        class="reveal"
-        ar
-        ar-scale="fixed"
-        alt="some more"
-        src="model/room04.glb"
-        ios-src="model/room04.usdz"
-        background-color="#70BCD1"
-        shadow-intensity="0.7"
-        quick-look-browsers="safari chrome"
-        camera-controls
-        model-visibility="false"
-        interaction-prompt="none"
-        reveal="manual"
-        ar magic-leap>
-        <button class="ar-button" slot="ar-button" style="border: none;">
-          <div class="ARButton__inner">
-            <p class="ARButton__text">AR</p>
-            <div class="ARCamera__icon">
-              <ArButton/>
+          </button>
+        </model-viewer>
+      </div>
+      <div class="model-viewer04" v-bind:class="{ active04: isActive04 }">
+        <model-viewer
+          class="reveal"
+          ar
+          ar-scale="fixed"
+          alt="some more"
+          src="model/room04.glb"
+          ios-src="model/room04.usdz"
+          background-color="#70BCD1"
+          shadow-intensity="0.7"
+          quick-look-browsers="safari chrome"
+          camera-controls
+          interaction-prompt="none"
+          reveal="manual"
+          ar magic-leap>
+          <button class="ar-button" slot="ar-button" style="border: none;">
+            <div class="ARButton__inner">
+              <p class="ARButton__text">AR</p>
+              <div class="ARCamera__icon">
+                <ArButton/>
+              </div>
             </div>
-          </div>
-        </button>
-      </model-viewer>
-    </div>
-    <div class="model-viewerWrap" v-if="this.state === 'room05'">
-      <model-viewer
-        class="reveal"
-        ar
-        ar-scale="fixed"
-        alt="NEW HOPE"
-        src="model/room05.glb"
-        ios-src="model/room05.usdz"
-        background-color="#70BCD1"
-        shadow-intensity="0.7"
-        quick-look-browsers="safari chrome"
-        camera-controls
-        model-visibility="false"
-        interaction-prompt="none"
-        reveal="manual"
-        ar magic-leap>
-        <button class="ar-button" slot="ar-button" style="border: none;">
-          <div class="ARButton__inner">
-            <p class="ARButton__text">AR</p>
-            <div class="ARCamera__icon">
-              <ArButton/>
+          </button>
+        </model-viewer>
+      </div>
+      <div class="model-viewer05" v-bind:class="{ active05: isActive05 }">
+        <model-viewer
+          class="reveal"
+          ar
+          ar-scale="fixed"
+          alt="NEW HOPE"
+          src="model/room05.glb"
+          ios-src="model/room05.usdz"
+          background-color="#70BCD1"
+          shadow-intensity="0.7"
+          quick-look-browsers="safari chrome"
+          camera-controls
+          interaction-prompt="none"
+          reveal="manual"
+          ar magic-leap>
+          <button class="ar-button" slot="ar-button" style="border: none;">
+            <div class="ARButton__inner">
+              <p class="ARButton__text">AR</p>
+              <div class="ARCamera__icon">
+                <ArButton/>
+              </div>
             </div>
-          </div>
-        </button>
-      </model-viewer>
-    </div>
-    <div class="model-viewerWrap" v-if="this.state === 'room06'">
-      <model-viewer
-        class="reveal"
-        ar
-        ar-scale="fixed"
-        alt="trivial"
-        src="model/room06.glb"
-        ios-src="model/room06.usdz"
-        background-color="#70BCD1"
-        shadow-intensity="0.7"
-        quick-look-browsers="safari chrome"
-        camera-controls
-        model-visibility="false"
-        interaction-prompt="none"
-        reveal="manual"
-        ar magic-leap>
-        <button class="ar-button" slot="ar-button" style="border: none;">
-          <div class="ARButton__inner">
-            <p class="ARButton__text">AR</p>
-            <div class="ARCamera__icon">
-              <ArButton/>
+          </button>
+        </model-viewer>
+      </div>
+      <div class="model-viewer06" v-bind:class="{ active06: isActive06 }">
+        <model-viewer
+          class="reveal"
+          ar
+          ar-scale="fixed"
+          alt="trivial"
+          src="model/room06.glb"
+          ios-src="model/room06.usdz"
+          background-color="#70BCD1"
+          shadow-intensity="0.7"
+          quick-look-browsers="safari chrome"
+          camera-controls
+          interaction-prompt="none"
+          reveal="manual"
+          ar magic-leap>
+          <button class="ar-button" slot="ar-button" style="border: none;">
+            <div class="ARButton__inner">
+              <p class="ARButton__text">AR</p>
+              <div class="ARCamera__icon">
+                <ArButton/>
+              </div>
             </div>
-          </div>
-        </button>
-      </model-viewer>
-    </div>
-    <div class="model-viewerWrap" v-if="this.state === 'room07'">
-      <model-viewer
-        class="reveal"
-        ar
-        ar-scale="fixed"
-        alt="MMS"
-        src="model/room07.glb"
-        ios-src="model/room07.usdz"
-        background-color="#70BCD1"
-        shadow-intensity="0.7"
-        quick-look-browsers="safari chrome"
-        camera-controls
-        model-visibility="false"
-        interaction-prompt="none"
-        reveal="manual"
-        ar magic-leap>
-        <button class="ar-button" slot="ar-button" style="border: none;">
-          <div class="ARButton__inner">
-            <p class="ARButton__text">AR</p>
-            <div class="ARCamera__icon">
-              <ArButton/>
+          </button>
+        </model-viewer>
+      </div>
+      <div class="model-viewer07" v-bind:class="{ active07: isActive07 }">
+        <model-viewer
+          class="reveal"
+          ar
+          ar-scale="fixed"
+          alt="MMS"
+          src="model/room07.glb"
+          ios-src="model/room07.usdz"
+          background-color="#70BCD1"
+          shadow-intensity="0.7"
+          quick-look-browsers="safari chrome"
+          camera-controls
+          interaction-prompt="none"
+          reveal="manual"
+          ar magic-leap>
+          <button class="ar-button" slot="ar-button" style="border: none;">
+            <div class="ARButton__inner">
+              <p class="ARButton__text">AR</p>
+              <div class="ARCamera__icon">
+                <ArButton/>
+              </div>
             </div>
-          </div>
-        </button>
-      </model-viewer>
-    </div>
-    <div class="model-viewerWrap" v-if="this.state === 'room08'">
-      <model-viewer
-        class="reveal"
-        ar
-        ar-scale="fixed"
-        alt="BOY"
-        src="model/room08.glb"
-        ios-src="model/room08.usdz"
-        background-color="#70BCD1"
-        shadow-intensity="0.7"
-        quick-look-browsers="safari chrome"
-        camera-controls
-        model-visibility="false"
-        interaction-prompt="none"
-        reveal="manual"
-        ar magic-leap>
-        <button class="ar-button" slot="ar-button" style="border: none;">
-          <div class="ARButton__inner">
-            <p class="ARButton__text">AR</p>
-            <div class="ARCamera__icon">
-              <ArButton/>
+          </button>
+        </model-viewer>
+      </div>
+      <div class="model-viewer08" v-bind:class="{ active08: isActive08 }">
+        <model-viewer
+          class="reveal"
+          ar
+          ar-scale="fixed"
+          alt="BOY"
+          src="model/room08.glb"
+          ios-src="model/room08.usdz"
+          background-color="#70BCD1"
+          shadow-intensity="0.7"
+          quick-look-browsers="safari chrome"
+          camera-controls
+          interaction-prompt="none"
+          reveal="manual"
+          ar magic-leap>
+          <button class="ar-button" slot="ar-button" style="border: none;">
+            <div class="ARButton__inner">
+              <p class="ARButton__text">AR</p>
+              <div class="ARCamera__icon">
+                <ArButton/>
+              </div>
             </div>
-          </div>
-        </button>
-      </model-viewer>
-    </div>
-    <div class="model-viewerWrap" v-if="this.state === 'room09'">
-      <model-viewer
-        class="reveal"
-        ar
-        ar-scale="fixed"
-        alt="GIRL"
-        src="model/room09.glb"
-        ios-src="model/room09.usdz"
-        background-color="#70BCD1"
-        shadow-intensity="0.7"
-        quick-look-browsers="safari chrome"
-        camera-controls
-        model-visibility="false"
-        interaction-prompt="none"
-        reveal="manual"
-        ar magic-leap>
-        <button class="ar-button" slot="ar-button" style="border: none;">
-          <div class="ARButton__inner">
-            <p class="ARButton__text">AR</p>
-            <div class="ARCamera__icon">
-              <ArButton/>
+          </button>
+        </model-viewer>
+      </div>
+      <div class="model-viewer09" v-bind:class="{ active09: isActive09 }">
+        <model-viewer
+          class="reveal"
+          ar
+          ar-scale="fixed"
+          alt="GIRL"
+          src="model/room09.glb"
+          ios-src="model/room09.usdz"
+          background-color="#70BCD1"
+          shadow-intensity="0.7"
+          quick-look-browsers="safari chrome"
+          camera-controls
+          interaction-prompt="none"
+          reveal="manual"
+          ar magic-leap>
+          <button class="ar-button" slot="ar-button" style="border: none;">
+            <div class="ARButton__inner">
+              <p class="ARButton__text">AR</p>
+              <div class="ARCamera__icon">
+                <ArButton/>
+              </div>
             </div>
-          </div>
-        </button>
-      </model-viewer>
-    </div>
-    <div class="model-viewerWrap" v-if="this.state === 'room10'">
-      <model-viewer
-        class="reveal"
-        ar
-        ar-scale="fixed"
-        alt="1/365"
-        src="model/room10.glb"
-        ios-src="model/room10.usdz"
-        background-color="#70BCD1"
-        shadow-intensity="0.7"
-        quick-look-browsers="safari chrome"
-        camera-controls
-        model-visibility="false"
-        interaction-prompt="none"
-        reveal="manual"
-        ar magic-leap>
-        <button class="ar-button" slot="ar-button" style="border: none;">
-          <div class="ARButton__inner">
-            <p class="ARButton__text">AR</p>
-            <div class="ARCamera__icon">
-              <ArButton/>
+          </button>
+        </model-viewer>
+      </div>
+      <div class="model-viewer10" v-bind:class="{ active10: isActive10 }">
+        <model-viewer
+          class="reveal"
+          ar
+          ar-scale="fixed"
+          alt="1/365"
+          src="model/room10.glb"
+          ios-src="model/room10.usdz"
+          background-color="#70BCD1"
+          shadow-intensity="0.7"
+          quick-look-browsers="safari chrome"
+          camera-controls
+          interaction-prompt="none"
+          reveal="manual"
+          ar magic-leap>
+          <button class="ar-button" slot="ar-button" style="border: none;">
+            <div class="ARButton__inner">
+              <p class="ARButton__text">AR</p>
+              <div class="ARCamera__icon">
+                <ArButton/>
+              </div>
             </div>
-          </div>
-        </button>
-      </model-viewer>
-    </div>
-    <div class="model-viewerWrap" v-if="this.state === 'room11'">
-      <model-viewer
-        class="reveal"
-        ar
-        ar-scale="fixed"
-        alt="Home"
-        src="model/room11.glb"
-        ios-src="model/room11.usdz"
-        background-color="#70BCD1"
-        shadow-intensity="0.7"
-        quick-look-browsers="safari chrome"
-        camera-controls
-        model-visibility="false"
-        interaction-prompt="none"
-        reveal="manual"
-        ar magic-leap>
-        <button class="ar-button" slot="ar-button" style="border: none;">
-          <div class="ARButton__inner">
-            <p class="ARButton__text">AR</p>
-            <div class="ARCamera__icon">
-              <ArButton/>
+          </button>
+        </model-viewer>
+      </div>
+      <div class="model-viewer11" v-bind:class="{ active11: isActive11 }">
+        <model-viewer
+          class="reveal"
+          ar
+          ar-scale="fixed"
+          alt="Home"
+          src="model/room11.glb"
+          ios-src="model/room11.usdz"
+          background-color="#70BCD1"
+          shadow-intensity="0.7"
+          quick-look-browsers="safari chrome"
+          camera-controls
+          interaction-prompt="none"
+          reveal="manual"
+          ar magic-leap>
+          <button class="ar-button" slot="ar-button" style="border: none;">
+            <div class="ARButton__inner">
+              <p class="ARButton__text">AR</p>
+              <div class="ARCamera__icon">
+                <ArButton/>
+              </div>
             </div>
-          </div>
-        </button>
-      </model-viewer>
+          </button>
+        </model-viewer>
+      </div>
     </div>
     <!---->
     <div class="buy__button">
@@ -327,7 +318,18 @@
     data() {
       return {
         buyLink : '',
-        isDetailUIBox : false
+        isDetailUIBox : false,
+        isActive01 : false,
+        isActive02 : false,
+        isActive03 : false,
+        isActive04 : false,
+        isActive05 : false,
+        isActive06 : false,
+        isActive07 : false,
+        isActive08 : false,
+        isActive09 : false,
+        isActive10 : false,
+        isActive11 : false,
       }
     },
     computed: {
@@ -349,7 +351,70 @@
         EventBus.$on("DETAIL_UI_HIDE", this.hideDetailUIBox);
         EventBus.$on("VIEW_CHANGE_DETAIL_UI", this.viewChangeDetailUIBox);
         EventBus.$on("CHECK_DETAIL_UI_BOX", this.checkDetailUIBox);
+        EventBus.$on("CHANGE_MODEL_VIEWER", this.changeModelViewerStatus);
         EventBus.$on("SET_BUY_LINK", this.setBuyLink);
+      },
+      changeModelViewerStatus(canvasNum) {
+        this.isActive01 = false;
+        this.isActive02 = false;
+        this.isActive03 = false;
+        this.isActive04 = false;
+        this.isActive05 = false;
+        this.isActive06 = false;
+        this.isActive07 = false;
+        this.isActive08 = false;
+        this.isActive09 = false;
+        this.isActive10 = false;
+        this.isActive11 = false;
+
+        switch (canvasNum) {
+          case '1':
+            this.isActive01 = true;
+            break;
+
+          case '2':
+            this.isActive02 = true;
+            break;
+
+          case '3':
+            this.isActive03 = true;
+            break;
+
+          case '4':
+            this.isActive04 = true;
+            break;
+
+          case '5':
+            this.isActive05 = true;
+            break;
+
+          case '6':
+            this.isActive06 = true;
+            break;
+
+          case '7':
+            this.isActive07 = true;
+            break;
+
+          case '8':
+            this.isActive08 = true;
+            break;
+
+          case '9':
+            this.isActive09 = true;
+            break;
+
+          case '10':
+            this.isActive10 = true;
+            break;
+
+          case '11':
+            this.isActive11 = true;
+            break;
+
+          default:
+            break;
+        }
       },
       checkDetailUIBox() {
         if(this.isDetailUIBox) {
@@ -471,12 +536,136 @@
       top: get-vw(403px);
       right: 0;
       z-index: 100;
-      display: none;
-      opacity: 0;
+      /*display: none;*/
+      opacity: 0.0;
     }
 
     .model-viewerWrap {
-
+      width: get-vw(140px);
+      height: get-vw(140px);
+      position: relative;
+      z-index: 1;
+      .model-viewer01 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+        opacity: 0.0;
+        &.active01 {
+          pointer-events: auto;
+          opacity: 1.0;
+        }
+      }
+      .model-viewer02 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+        opacity: 0.0;
+        &.active02 {
+          pointer-events: auto;
+          opacity: 1.0;
+        }
+      }
+      .model-viewer03 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+        opacity: 0.0;
+        &.active03 {
+          pointer-events: auto;
+          opacity: 1.0;
+        }
+      }
+      .model-viewer04 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+        opacity: 0.0;
+        &.active04 {
+          pointer-events: auto;
+          opacity: 1.0;
+        }
+      }
+      .model-viewer05 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+        opacity: 0.0;
+        &.active05 {
+          pointer-events: auto;
+          opacity: 1.0;
+        }
+      }
+      .model-viewer06 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+        opacity: 0.0;
+        &.active06 {
+          pointer-events: auto;
+          opacity: 1.0;
+        }
+      }
+      .model-viewer07 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+        opacity: 0.0;
+        &.active07 {
+          pointer-events: auto;
+          opacity: 1.0;
+        }
+      }
+      .model-viewer08 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+        opacity: 0.0;
+        &.active08 {
+          pointer-events: auto;
+          opacity: 1.0;
+        }
+      }
+      .model-viewer09 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+        opacity: 0.0;
+        &.active09 {
+          pointer-events: auto;
+          opacity: 1.0;
+        }
+      }
+      .model-viewer10 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+        opacity: 0.0;
+        &.active10 {
+          pointer-events: auto;
+          opacity: 1.0;
+        }
+      }
+      .model-viewer11 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+        opacity: 0.0;
+        &.active11 {
+          pointer-events: auto;
+          opacity: 1.0;
+        }
+      }
     }
     .reveal {
       width: get-vw(140px);

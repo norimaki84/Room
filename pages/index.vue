@@ -228,7 +228,7 @@
     }
     .enterSection__description {
       @include sansJpMedium();
-      font-size: get-vw(22px);
+      font-size: get-vw(16px);
       color: #c5c5c5;
       text-align: center;
       line-height: 1.6;
