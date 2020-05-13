@@ -7,99 +7,99 @@ export const state = () => ({
       id: 0,
       buyLink: 'https://www.google.com/?hl=ja',
       detail: {
-        title: 'Room01',
+        title: 'Room',
         size: '33.3cm × 33.3cm',
-        edition: '1'
+        edition: '15'
       }
     },
     {
       id: 1,
       buyLink: 'https://www.yahoo.co.jp/',
       detail: {
-        title: 'Room02',
-        size: '44.4cm × 44.4cm',
-        edition: '2'
+        title: 'hope',
+        size: '33.3cm × 33.3cm',
+        edition: '15'
       }
     },
     {
       id: 2,
       buyLink: 'https://www.yahoo.co.jp/',
       detail: {
-        title: 'Room03',
-        size: '44.4cm × 44.4cm',
-        edition: '3'
+        title: 'self',
+        size: '33.3cm × 33.3cm',
+        edition: '15'
       }
     },
     {
       id: 3,
       buyLink: 'https://www.yahoo.co.jp/',
       detail: {
-        title: 'Room04',
-        size: '44.4cm × 44.4cm',
-        edition: '4'
+        title: 'some more',
+        size: '33.3cm × 33.3cm',
+        edition: '15'
       }
     },
     {
       id: 4,
       buyLink: 'https://www.yahoo.co.jp/',
       detail: {
-        title: 'Room05',
-        size: '44.4cm × 44.4cm',
-        edition: '5'
+        title: 'NEW HOPE',
+        size: '33.3cm × 33.3cm',
+        edition: '15'
       }
     },
     {
       id: 5,
       buyLink: 'https://www.yahoo.co.jp/',
       detail: {
-        title: 'Room06',
-        size: '44.4cm × 44.4cm',
-        edition: '6'
+        title: 'trivial',
+        size: '33.3cm × 33.3cm',
+        edition: '15'
       }
     },
     {
       id: 6,
       buyLink: 'https://www.yahoo.co.jp/',
       detail: {
-        title: 'Room07',
-        size: '44.4cm × 44.4cm',
-        edition: '7'
+        title: 'MMS',
+        size: '33.3cm × 33.3cm',
+        edition: '15'
       }
     },
     {
       id: 7,
       buyLink: 'https://www.yahoo.co.jp/',
       detail: {
-        title: 'Room08',
-        size: '44.4cm × 44.4cm',
-        edition: '8'
+        title: 'BOY',
+        size: '33.3cm × 33.3cm',
+        edition: '15'
       }
     },
     {
       id: 8,
       buyLink: 'https://www.yahoo.co.jp/',
       detail: {
-        title: 'Room09',
-        size: '44.4cm × 44.4cm',
-        edition: '9'
+        title: 'GIRL',
+        size: '33.3cm × 33.3cm',
+        edition: '15'
       }
     },
     {
       id: 9,
       buyLink: 'https://www.yahoo.co.jp/',
       detail: {
-        title: 'Room10',
-        size: '44.4cm × 44.4cm',
-        edition: '10'
+        title: '1/365',
+        size: '33.3cm × 33.3cm',
+        edition: '15'
       }
     },
     {
       id: 10,
       buyLink: 'https://www.yahoo.co.jp/',
       detail: {
-        title: 'Room11',
-        size: '44.4cm × 44.4cm',
-        edition: '11'
+        title: 'Home',
+        size: '33.3cm × 33.3cm',
+        edition: '15'
       }
     }
   ],

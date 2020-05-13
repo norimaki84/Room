@@ -64,8 +64,8 @@ class CommonGL {
     this.lightsUtils = new LightsUtils();
     this.lightsUtils.init();
 
-    let axes = new THREE.AxesHelper(300);
-    this.scene.add(axes);
+    // let axes = new THREE.AxesHelper(300);
+    // this.scene.add(axes);
 
     this.clock = new THREE.Clock();
     this.clock.start();

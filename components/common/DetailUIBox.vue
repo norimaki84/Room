@@ -365,13 +365,13 @@
           let tl = gsap.timeline();
           tl
             .to('.detailUIBox', {
-              duration: 0.8,
+              duration: 0.4,
               opacity: 0.0,
               y: 0,
               ease: "power2.in"
             })
             .to('.detailUIBox', {
-              duration: 0.8,
+              duration: 0.4,
               opacity: 1.0,
               ease: "power2.inOut",
               onComplete: ()=>{
@@ -470,7 +470,6 @@
       position: fixed;
       top: get-vw(403px);
       right: 0;
-      overflow: hidden;
       z-index: 100;
       display: none;
       opacity: 0;
@@ -552,7 +551,7 @@
         font-size: get-vw(22px);
         color: #000;
         line-height: 1.0;
-        margin-bottom: get-vw(13px);
+        margin-bottom: get-vw(8px);
       }
       .cart__icon {
         width: get-vw(32px);
@@ -584,7 +583,7 @@
         font-size: get-vw(22px);
         color: #000;
         line-height: 1.0;
-        margin-bottom: get-vw(13px);
+        margin-bottom: get-vw(8px);
       }
       .cart__icon {
         width: get-vw(32px);

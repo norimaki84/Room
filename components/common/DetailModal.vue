@@ -2,16 +2,16 @@
   <section class="detailModal" aria-label="絵の詳細">
     <div class="detailModal__inner">
       <dl class="detailModal__titleBox">
-        <dt class="detailModal__titleBox--Tag">TITLE:</dt>
+        <dt class="detailModal__titleBox--Tag">TITLE :</dt>
         <dd class="detailModal__titleBox--Text">{{ this.canvasArray[this.getState].detail.title }}</dd>
       </dl>
       <div class="dlWrap">
         <dl class="detailModal__sizeBox">
-          <dt class="detailModal__sizeBox--Tag">SIZE:</dt>
+          <dt class="detailModal__sizeBox--Tag">SIZE :</dt>
           <dd class="detailModal__sizeBox--Text">{{ this.canvasArray[this.getState].detail.size }}</dd>
         </dl>
         <dl class="detailModal__editionBox">
-          <dt class="detailModal__editionBox--Tag">EDITION:</dt>
+          <dt class="detailModal__editionBox--Tag">EDITION :</dt>
           <dd class="detailModal__editionBox--Text">{{ this.canvasArray[this.getState].detail.edition }}</dd>
         </dl>
       </div>
@@ -107,7 +107,7 @@
       viewModal() {
         gsap.set(".detailModal", { display: "block" });
         gsap.to(".detailModal", {
-          duration: 0.4,
+          duration: 0.3,
           opacity: 1.0,
           ease: "power2.in"
         });
@@ -115,7 +115,7 @@
       // モーダルを非表示
 		  closeModal() {
         gsap.to(".detailModal", {
-          duration: 0.6,
+          duration: 0.3,
           opacity: 0.0,
           ease: "power2.in",
           onComplete: ()=> {
@@ -155,6 +155,8 @@
       align-items: center;
     }
     .detailModal__titleBox--Tag {
+      width: get-vw(62px);
+      text-align: right;
       line-height: 1.0;
       color: #4e4e4e;
       font-size: get-vw(22px);
@@ -173,17 +175,20 @@
       justify-content: flex-start;
     }
     .detailModal__sizeBox {
-      width: get-vw(254px);
+      width: get-vw(270px);
       margin: 0;
       display: flex;
       align-items: center;
     }
     .detailModal__sizeBox--Tag {
+      width: get-vw(62px);
+      text-align: right;
       line-height: 1.0;
       color: #4e4e4e;
       font-size: get-vw(22px);
     }
     .detailModal__sizeBox--Text {
+      width: get-vw(200px);
       line-height: 1.0;
       color: #fff;
       font-size: get-vw(22px);
@@ -196,6 +201,7 @@
       align-items: center;
     }
     .detailModal__editionBox--Tag {
+      /*width: get-vw(62px);*/
       line-height: 1.0;
       color: #4e4e4e;
       font-size: get-vw(22px);

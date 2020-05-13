@@ -11,19 +11,19 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '3D空間、AR技術を取り入れたRooo Lou EXHIBITON 「Room」' },
+      { hid: 'description', name: 'description', content: '3D空間、AR技術を取り入れたRooo Lou Exhibiton「Room」' },
       { hid: 'keywords', name: 'keywords', content: 'RoooLou, Rooo, ルー, ルーイラスト, arexhibition, ルー個展' },
 
-      { hid: 'og:site_name', property: 'og:site_name', content: 'Rooo Lou EXHIBITION「Room」'},
-      { hid: 'og:title', property: 'og:title', content: 'Rooo Lou EXHIBITION「Room」'},
-      { hid: 'og:description', property: 'og:description', content: '3D空間、AR技術を取り入れたRooo Lou EXHIBITON 「Room」'},
+      { hid: 'og:site_name', property: 'og:site_name', content: 'Rooo Lou Exhibiton「Room」'},
+      { hid: 'og:title', property: 'og:title', content: 'Rooo Lou Exhibiton「Room」'},
+      { hid: 'og:description', property: 'og:description', content: '3D空間、AR技術を取り入れたRooo Lou Exhibiton「Room」'},
       { hid: 'og:url', property: 'og:url', content: 'http://exh-room.com/'},
       { hid: 'og:image', property: 'og:image', content: 'http://exh-room.com//og.png'},
       { hid: 'og:type', property: 'og:type', content: 'website'},
 
       { hid: 'twitter:card', name: 'twitter:card', content: 'summary_large_image'},
-      { hid: 'twitter:title', name: 'twitter:title', content: 'Rooo Lou EXHIBITION「Room」'},
-      { hid: 'twitter:description', name: 'twitter:description', content: '3D空間、AR技術を取り入れたRooo Lou EXHIBITON 「Room」'},
+      { hid: 'twitter:title', name: 'twitter:title', content: 'Rooo Lou Exhibiton「Room」'},
+      { hid: 'twitter:description', name: 'twitter:description', content: '3D空間、AR技術を取り入れたRooo Lou Exhibiton「Room」'},
       { hid: 'twitter:image', name: 'twitter:image', content: 'http://exh-room.com//og.png'}
     ],
     link: [

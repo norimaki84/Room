@@ -8,9 +8,16 @@
         <h1 class="enterSection__mainTitle"><MainLogo></MainLogo></h1>
         <div class="enterSection__startButton" @click="hideEnterSection">
           <p class="enterSection__startButton--text">ENTER</p>
-          <div class="enterSection__startButton--border"></div>
+          <div class="enterSection__startButton--border">
+            <div class="enterSection__startButton--inner"></div>
+          </div>
         </div>
-        <p class="enterSection__description">※注釈を何かしら入るんじゃないかな</p>
+        <p class="enterSection__description">
+          - 動作推奨環境 -<br>
+          iOS：iOS12以降で最新版Safari<br>
+          Android：Android7.0以降で最新版Chrome<br>
+          ※AR表示は機能対応端末のみとなります<br>
+          ※視聴環境によっては正常に動作しない可能性があります</p>
       </div>
     </div>
     <Header></Header>
@@ -42,7 +49,7 @@
     },
     data() {
       return {
-
+        tlBorderLoopAnimation : null
       }
     },
     computed: {
@@ -59,69 +66,92 @@
     },
     mounted() {
       this.domInit();
-      this.openingEnterSectionAnimation();
+      setTimeout(()=>{
+        this.openingEnterSectionAnimation();
+      }, 1000);
     },
     methods: {
       domInit() {
-        gsap.set(".enterSection__mainTitle", { opacity: 0.0, y: 10 });
-        gsap.set(".enterSection__startButton", { opacity: 0.0, y: 10 });
-        gsap.set(".enterSection__description", { opacity: 0.0, y: 10 });
+        gsap.set(".enterSection__mainTitle", { opacity: 0.0 });
+        gsap.set(".enterSection__startButton", { opacity: 0.0 });
+        gsap.set(".enterSection__description", { opacity: 0.0 });
       },
+      // エンターセクションを表示
       openingEnterSectionAnimation() {
         let tl = gsap.timeline();
         tl
           .to('.enterSection__mainTitle', {
-            delay: 0.5,
-            duration: 0.6,
+            duration: 1.0,
             opacity: 1.0,
-            y: 0,
             ease: "power2.inOut"
           })
           .to('.enterSection__startButton', {
-            duration: 0.6,
+            duration: 1.0,
             opacity: 1.0,
-            y: 0,
             ease: "power2.inOut"
-          }, "-=0.4")
+          }, "-=0.6")
           .to('.enterSection__description', {
-            duration: 0.6,
+            duration: 1.0,
             opacity: 1.0,
-            y: 0,
-            ease: "power2.inOut"
-          }, "-=0.4");
+            ease: "power2.inOut",
+            onComplete: ()=> {
+              this.borderLoopAnimationStart();
+            }
+          }, "-=0.6");
       },
+      // エンターセクションを非表示
       hideEnterSection() {
         let tl = gsap.timeline();
         tl
           .to('.enterSection__mainTitle', {
-            duration: 0.6,
+            duration: 1.0,
             opacity: 0.0,
-            y: -10,
             ease: "power2.in"
           })
           .to('.enterSection__startButton', {
-            duration: 0.6,
+            duration: 1.0,
             opacity: 0.0,
-            y: -10,
-            ease: "power2.in"
-          }, "-=0.4")
+            ease: "power2.in",
+            onComplete: ()=> {
+              this.borderLoopAnimationStop();
+            }
+          }, "-=0.6")
           .to('.enterSection__description', {
-            duration: 0.6,
+            duration: 1.0,
             opacity: 0.0,
-            y: -10,
             ease: "power2.in"
-          }, "-=0.4")
+          }, "-=0.6")
           .to('.enterSection', {
-            duration: 0.6,
+            duration: 1.0,
             opacity: 0.0,
             ease: "power2.in",
             onComplete: ()=> {
               gsap.set(".enterSection", { display: "none" });
               EventBus.$emit("FIRST_CAMERA_ANIMATION");
               EventBus.$emit("FADEIN_CANVAS");
-              // this.$store.commit('SET_isFirstQuiz', true);
             }
           });
+      },
+      // Enterボタンのラインアニメーションスタート
+      borderLoopAnimationStart() {
+        this.tlBorderLoopAnimation = gsap.timeline({repeat: -1});
+        this.tlBorderLoopAnimation
+          .to('.enterSection__startButton--inner', {
+            duration: 1.2,
+            scaleX:1.0,
+            ease: "liner",
+            transformOrigin: "left"
+          })
+          .to('.enterSection__startButton--inner', {
+            duration: 1.2,
+            scaleX: 0.0,
+            ease: "liner",
+            transformOrigin: "right"
+          });
+      },
+      // Enterボタンのラインアニメーションストップ
+      borderLoopAnimationStop() {
+        this.tlBorderLoopAnimation.kill();
       }
     }
   }
@@ -135,6 +165,7 @@
     min-height: -webkit-fill-available;
     position: relative;
     z-index: 10;
+    overflow: hidden;
   }
 
   @media screen and (max-width: 768px) {
@@ -187,12 +218,20 @@
       width: get-vw(220px);
       height: get-vw(1px);
       margin: 0 auto;
-      background-color: #000;
+      position: relative;
+      .enterSection__startButton--inner {
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        transform: scaleX(0);
+      }
     }
     .enterSection__description {
       @include sansJpMedium();
       font-size: get-vw(22px);
-      color: #b1b1b1;
+      color: #c5c5c5;
+      text-align: center;
+      line-height: 1.6;
     }
   }
 </style>

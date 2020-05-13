@@ -166,14 +166,14 @@
       left: 0;
       z-index: 10;
       opacity: 0.0;
-      border-top: get-vw(2px) solid #c0c0c0;
+      border-top: get-vw(2px) solid #f1f1f1;
     }
     .controlBox__nav {
       width: 100%;
       height: auto;
       display: flex;
       flex-wrap: wrap;
-      background-color: #c0c0c0;
+      background-color: #f1f1f1;
     }
     .controlBox__nav--item {
       @include poppinsMedium();
