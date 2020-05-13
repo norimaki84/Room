@@ -2,7 +2,7 @@
   <div class="header" aria-label="グローバルヘッダー">
     <div class="header__inner">
       <div class="header__twitterButton">
-        <a href="#" target="_blank">
+        <a href="http://twitter.com/share?url=https://exh-room.com/&text=3D%E7%A9%BA%E9%96%93%E3%80%81AR%E6%8A%80%E8%A1%93%E3%82%92%E5%8F%96%E3%82%8A%E5%85%A5%E3%82%8C%E3%81%9FRooo%20Lou%20Exhibiton%E3%80%8CRoom%E3%80%8D" target="_blank">
           <img src="~assets/img/btn_tw@2x.png">
         </a>
       </div>
