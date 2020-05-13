@@ -6,7 +6,7 @@
         class="reveal"
         ar
         ar-scale="fixed"
-        alt="Room01"
+        alt="Room"
         src="model/room01.glb"
         ios-src="model/room01.usdz"
         background-color="#70BCD1"
@@ -32,7 +32,7 @@
         class="reveal"
         ar
         ar-scale="fixed"
-        alt="Room02"
+        alt="hope"
         src="model/room02.glb"
         ios-src="model/room02.usdz"
         background-color="#70BCD1"
@@ -58,7 +58,7 @@
         class="reveal"
         ar
         ar-scale="fixed"
-        alt="Room03"
+        alt="self"
         src="model/room03.glb"
         ios-src="model/room03.usdz"
         background-color="#70BCD1"
@@ -84,7 +84,7 @@
         class="reveal"
         ar
         ar-scale="fixed"
-        alt="Room04"
+        alt="some more"
         src="model/room04.glb"
         ios-src="model/room04.usdz"
         background-color="#70BCD1"
@@ -110,7 +110,7 @@
         class="reveal"
         ar
         ar-scale="fixed"
-        alt="Room05"
+        alt="NEW HOPE"
         src="model/room05.glb"
         ios-src="model/room05.usdz"
         background-color="#70BCD1"
@@ -136,7 +136,7 @@
         class="reveal"
         ar
         ar-scale="fixed"
-        alt="Room06"
+        alt="trivial"
         src="model/room06.glb"
         ios-src="model/room06.usdz"
         background-color="#70BCD1"
@@ -162,7 +162,7 @@
         class="reveal"
         ar
         ar-scale="fixed"
-        alt="Room07"
+        alt="MMS"
         src="model/room07.glb"
         ios-src="model/room07.usdz"
         background-color="#70BCD1"
@@ -188,7 +188,7 @@
         class="reveal"
         ar
         ar-scale="fixed"
-        alt="Room08"
+        alt="BOY"
         src="model/room08.glb"
         ios-src="model/room08.usdz"
         background-color="#70BCD1"
@@ -214,7 +214,7 @@
         class="reveal"
         ar
         ar-scale="fixed"
-        alt="Room09"
+        alt="GIRL"
         src="model/room09.glb"
         ios-src="model/room09.usdz"
         background-color="#70BCD1"
@@ -240,7 +240,7 @@
         class="reveal"
         ar
         ar-scale="fixed"
-        alt="Room10"
+        alt="1/365"
         src="model/room10.glb"
         ios-src="model/room10.usdz"
         background-color="#70BCD1"
@@ -266,7 +266,7 @@
         class="reveal"
         ar
         ar-scale="fixed"
-        alt="Room11"
+        alt="Home"
         src="model/room11.glb"
         ios-src="model/room11.usdz"
         background-color="#70BCD1"
