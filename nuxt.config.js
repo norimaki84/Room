@@ -18,13 +18,13 @@ export default {
       { hid: 'og:title', property: 'og:title', content: 'Rooo Lou Exhibiton「Room」'},
       { hid: 'og:description', property: 'og:description', content: '3D空間、AR技術を取り入れたRooo Lou Exhibiton「Room」'},
       { hid: 'og:url', property: 'og:url', content: 'http://exh-room.com/'},
-      { hid: 'og:image', property: 'og:image', content: 'http://exh-room.com//og.png'},
+      { hid: 'og:image', property: 'og:image', content: 'http://exh-room.com/og.png'},
       { hid: 'og:type', property: 'og:type', content: 'website'},
 
       { hid: 'twitter:card', name: 'twitter:card', content: 'summary_large_image'},
       { hid: 'twitter:title', name: 'twitter:title', content: 'Rooo Lou Exhibiton「Room」'},
       { hid: 'twitter:description', name: 'twitter:description', content: '3D空間、AR技術を取り入れたRooo Lou Exhibiton「Room」'},
-      { hid: 'twitter:image', name: 'twitter:image', content: 'http://exh-room.com//og.png'}
+      { hid: 'twitter:image', name: 'twitter:image', content: 'http://exh-room.com/og.png'}
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
