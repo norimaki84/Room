@@ -122,7 +122,7 @@ class CommonGL {
       this.cameraControls.update( this.time.delta );
       this.renderer.render(this.scene, this.camera);
     }
-    
+
   }
 
 }
