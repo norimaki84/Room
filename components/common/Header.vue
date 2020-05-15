@@ -7,7 +7,9 @@
         </a>
       </div>
       <div class="header__logo">
-        <HeaderLogo></HeaderLogo>
+        <a href="/">
+          <HeaderLogo></HeaderLogo>
+        </a>
       </div>
       <div class="header__eclink">
         <a href="https://exhroom.thebase.in/" target="_blank">
