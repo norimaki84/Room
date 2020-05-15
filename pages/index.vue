@@ -119,7 +119,7 @@
             ease: "power2.in",
             onComplete: ()=> {
               setTimeout(()=> {
-                this.borderLoopAnimationStop();
+                this.isAnimation = false;
               }, 1000);
             }
           }, "-=1.0")

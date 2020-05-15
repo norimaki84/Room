@@ -1,5 +1,5 @@
 <template>
-  <div class="detailUIBox">
+  <div class="detailUIBox" :style="{'top': this._innerHeight + 'px'}">
     <!---->
     <div class="model-viewerWrap">
       <div class="model-viewer01" v-bind:class="{ active01: isActive01 }">
@@ -330,16 +330,16 @@
         isActive09 : false,
         isActive10 : false,
         isActive11 : false,
+        _innerHeight: 0
       }
     },
     computed: {
       ...mapState(["state", "canvasArray"])
     },
     created() {
-
+      this._innerHeight = window.innerHeight / 2;
     },
     beforeMount() {
-
     },
     mounted() {
       this.attachEvent();
@@ -533,10 +533,9 @@
       width: get-vw(124px);
       height: get-vw(401px);
       position: fixed;
-      top: get-vw(403px);
       right: 0;
       z-index: 100;
-      /*display: none;*/
+      margin-top: get-vw(-200px);
       opacity: 0.0;
     }
 
@@ -684,7 +683,7 @@
         justify-content: center;
         align-items: center;
         .ARButton__inner {
-          margin-top: get-vw(-5px);
+          margin-top: get-vw(-30px);
           .ARButton__text {
             @include poppinsMedium();
             font-size: get-vw(22px);
@@ -729,6 +728,7 @@
       align-items: center;
     }
     .buy__button--inner {
+      margin-top: get-vw(-15px);
       a {
         display: block;
         width: 100%;
@@ -767,6 +767,7 @@
       align-items: center;
     }
     .detail__button--inner {
+      margin-top: get-vw(-15px);
       .detail__button--text {
         @include poppinsMedium();
         font-size: get-vw(22px);
