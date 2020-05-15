@@ -118,6 +118,7 @@
             opacity: 0.0,
             ease: "power2.in",
             onComplete: ()=> {
+              EventBus.$emit("SWITCH_RENDER");
               setTimeout(()=> {
                 this.isAnimation = false;
               }, 1000);
@@ -247,13 +248,13 @@
         width: 100%;
         height: 100%;
         display: block;
-        will-change: auto;
+        will-change: background-position, background-size;
         /*will-change: background-position;*/
         background: linear-gradient(to right, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 50%);
         background-position: $line-width-abs 0;
         background-size: 200% 100%;
         &.animationActive {
-          animation: scrolldown 2.2s cubic-bezier(0.76, 0, 0.3, 1) forwards infinite;
+          animation: scrolldown 1.5s cubic-bezier(0.76, 0, 0.3, 1) forwards infinite;
         }
       }
     }

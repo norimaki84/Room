@@ -23,8 +23,11 @@ class CommonGL {
       delta : null
     };
 
+    this.isRender = false;
+
     this.init = this._init.bind(this);
     this.setSize = this._setSize.bind(this);
+    this.switchRender = this._switchRender.bind(this);
     this.onResize = this._onResize.bind(this);
     this.render = this._render.bind(this);
   }
@@ -35,6 +38,7 @@ class CommonGL {
    * @private
    */
   _init($canvas) {
+    EventBus.$on("SWITCH_RENDER", this.switchRender.bind(this));
 
     this.setSize();
 
@@ -88,6 +92,14 @@ class CommonGL {
   }
 
   /**
+   *
+   * @private
+   */
+  _switchRender() {
+    this.isRender = true;
+  }
+
+  /**
    * リサイズイベント
    * @private
    */
@@ -106,13 +118,11 @@ class CommonGL {
     this.time.delta = this.clock.getDelta();
     this.time.total += this.time.delta;
 
-    this.cameraControls.update( this.time.delta );
-    // if ( hasControlsUpdated ) {
-    //   this.renderer.render(this.scene, this.camera);
-    // }
-
-    this.renderer.render(this.scene, this.camera);
-    // this.renderer.gammaOutput = true;
+    if(this.isRender) {
+      this.cameraControls.update( this.time.delta );
+      this.renderer.render(this.scene, this.camera);
+    }
+    
   }
 
 }
