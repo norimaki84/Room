@@ -139,28 +139,7 @@
               EventBus.$emit("FADEIN_CANVAS");
             }
           });
-      },
-      // Enterボタンのラインアニメーションスタート
-      // borderLoopAnimationStart() {
-      //   this.tlBorderLoopAnimation = gsap.timeline({repeat: -1});
-      //   this.tlBorderLoopAnimation
-      //     .to('.enterSection__startButton--inner', {
-      //       duration: 1.2,
-      //       scaleX:1.0,
-      //       ease: "liner",
-      //       transformOrigin: "left"
-      //     })
-      //     .to('.enterSection__startButton--inner', {
-      //       duration: 1.2,
-      //       scaleX: 0.0,
-      //       ease: "liner",
-      //       transformOrigin: "right"
-      //     });
-      // },
-      // Enterボタンのラインアニメーションストップ
-      // borderLoopAnimationStop() {
-      //   this.tlBorderLoopAnimation.kill();
-      // }
+      }
     }
   }
 </script>
@@ -204,7 +183,6 @@
     }
     .enterSection__content {}
     .enterSection__mainTitle {
-      /*width: get-vw(288px);*/
       width: get-vw(330px);
       height: auto;
       margin: 0 auto get-vw(185px);
@@ -254,12 +232,15 @@
         background-position: $line-width-abs 0;
         background-size: 200% 100%;
         &.animationActive {
-          animation: scrolldown 1.5s cubic-bezier(0.76, 0, 0.3, 1) forwards infinite;
+          animation: scrolldown 2.5s cubic-bezier(0.76, 0, 0.3, 1) forwards infinite;
         }
       }
     }
     @keyframes scrolldown {
-      0%{
+      45%{
+        background-position: 0 0;
+      }
+      45%{
         background-position: $line-width-abs 0;
       }
       75% {

@@ -70,7 +70,7 @@ export const state = () => ({
       id: 7,
       buyLink: 'https://www.yahoo.co.jp/',
       detail: {
-        title: 'face-B',
+        title: 'face - B',
         size: '33.3cm × 33.3cm',
         edition: '15'
       }
@@ -79,7 +79,7 @@ export const state = () => ({
       id: 8,
       buyLink: 'https://www.yahoo.co.jp/',
       detail: {
-        title: 'face-G',
+        title: 'face - G',
         size: '33.3cm × 33.3cm',
         edition: '15'
       }
@@ -88,7 +88,7 @@ export const state = () => ({
       id: 9,
       buyLink: 'https://www.yahoo.co.jp/',
       detail: {
-        title: '1/365',
+        title: '1 / 365',
         size: '33.3cm × 33.3cm',
         edition: '15'
       }
