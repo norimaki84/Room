@@ -61,10 +61,9 @@ export default {
   ** Nuxt.js dev-modules
   */
   buildModules: [
-    // TODO:本番公開前にオンにする
-    // ['@nuxtjs/google-analytics', {
-    //   id: 'UA-165424285-1'
-    // }]
+    ['@nuxtjs/google-analytics', {
+      id: 'UA-165424285-1'
+    }]
   ],
   /*
   ** Nuxt.js modules
@@ -76,6 +75,7 @@ export default {
     '@nuxtjs/style-resources',
     // Doc: https://github.com/nuxt-community/dotenv-module
     '@nuxtjs/dotenv',
+    '@nuxtjs/google-analytics',
     [
       'nuxt-compress',
       {
@@ -90,6 +90,9 @@ export default {
     'nuxt-svg-loader',
     'nuxt-user-agent',
   ],
+  googleAnalytics: {
+    id: 'UA-165424285-1'
+  },
   manifest: {
     name: "Rooo Lou Exhibition「Room」",
     lang: 'ja-jp',

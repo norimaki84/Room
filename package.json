@@ -2,7 +2,7 @@
   "name": "rooo-loom",
   "version": "1.0.2",
   "description": "",
-  "author": "Norikazu Teraguchi (https://github.com/Teraguchi0804)",
+  "author": "Rooo Lou Illustrations",
   "private": true,
   "scripts": {
     "dev": "NUXT_HOST=0.0.0.0 NUXT_PORT=3333 nuxt",
