@@ -88,11 +88,11 @@
         }
         if(angle % 180 !== 0) {
           // ランドスケープモード
-          console.log("ランドスケープモード");
+          // console.log("ランドスケープモード");
           this.viewLandscapeModal();
         } else {
           // 縦モード
-          console.log("縦モード");
+          // console.log("縦モード");
           this.hideLandscapeModal();
         }
       },
