@@ -5,7 +5,7 @@ export const state = () => ({
   canvasArray: [
     {
       id: 0,
-      buyLink: 'https://www.google.com/?hl=ja',
+      buyLink: 'https://rooostore.thebase.in/items/29194401',
       detail: {
         title: 'Room',
         size: '33.3cm × 33.3cm',
@@ -14,7 +14,7 @@ export const state = () => ({
     },
     {
       id: 1,
-      buyLink: 'https://www.yahoo.co.jp/',
+      buyLink: 'https://rooostore.thebase.in/items/29226638',
       detail: {
         title: 'hope',
         size: '33.3cm × 33.3cm',
@@ -23,7 +23,7 @@ export const state = () => ({
     },
     {
       id: 2,
-      buyLink: 'https://www.yahoo.co.jp/',
+      buyLink: 'https://rooostore.thebase.in/items/29228843',
       detail: {
         title: 'self',
         size: '33.3cm × 33.3cm',
@@ -32,7 +32,7 @@ export const state = () => ({
     },
     {
       id: 3,
-      buyLink: 'https://www.yahoo.co.jp/',
+      buyLink: 'https://rooostore.thebase.in/items/29229098',
       detail: {
         title: 'some more',
         size: '33.3cm × 33.3cm',
@@ -41,7 +41,7 @@ export const state = () => ({
     },
     {
       id: 4,
-      buyLink: 'https://www.yahoo.co.jp/',
+      buyLink: 'https://rooostore.thebase.in/items/29228864',
       detail: {
         title: 'NEW HOPE',
         size: '33.3cm × 33.3cm',
@@ -50,7 +50,7 @@ export const state = () => ({
     },
     {
       id: 5,
-      buyLink: 'https://www.yahoo.co.jp/',
+      buyLink: 'https://rooostore.thebase.in/items/29228970',
       detail: {
         title: 'trivial',
         size: '33.3cm × 33.3cm',
@@ -59,7 +59,7 @@ export const state = () => ({
     },
     {
       id: 6,
-      buyLink: 'https://www.yahoo.co.jp/',
+      buyLink: 'https://rooostore.thebase.in/items/29229179',
       detail: {
         title: 'MMS',
         size: '33.3cm × 33.3cm',
@@ -68,7 +68,7 @@ export const state = () => ({
     },
     {
       id: 7,
-      buyLink: 'https://www.yahoo.co.jp/',
+      buyLink: 'https://rooostore.thebase.in/items/29229570',
       detail: {
         title: 'face - B',
         size: '33.3cm × 33.3cm',
@@ -77,7 +77,7 @@ export const state = () => ({
     },
     {
       id: 8,
-      buyLink: 'https://www.yahoo.co.jp/',
+      buyLink: 'https://rooostore.thebase.in/items/29229730',
       detail: {
         title: 'face - G',
         size: '33.3cm × 33.3cm',
@@ -86,7 +86,7 @@ export const state = () => ({
     },
     {
       id: 9,
-      buyLink: 'https://www.yahoo.co.jp/',
+      buyLink: 'https://rooostore.thebase.in/items/29229882',
       detail: {
         title: '1 / 365',
         size: '33.3cm × 33.3cm',
@@ -95,7 +95,7 @@ export const state = () => ({
     },
     {
       id: 10,
-      buyLink: 'https://www.yahoo.co.jp/',
+      buyLink: 'https://rooostore.thebase.in/items/29229950',
       detail: {
         title: 'Home',
         size: '33.3cm × 33.3cm',

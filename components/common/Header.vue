@@ -12,7 +12,7 @@
         </a>
       </div>
       <div class="header__eclink">
-        <a href="https://exhroom.thebase.in/" target="_blank">
+        <a href="https://rooostore.thebase.in/" target="_blank">
           <p class="header__eclink--text">GOODS</p>
         </a>
       </div>
