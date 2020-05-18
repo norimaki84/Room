@@ -7,23 +7,23 @@ export default {
   ** Headers of the page
   */
   head: {
-    title: 'Rooo Lou EXHIBITION「Room」',
+    title: 'Rooo Lou Exhibition「Room」',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '3D空間、AR技術を取り入れたRooo Lou Exhibiton「Room」' },
+      { hid: 'description', name: 'description', content: '3D空間、AR技術を取り入れたRooo Lou Exhibition「Room」' },
       { hid: 'keywords', name: 'keywords', content: 'RoooLou, Rooo, ルー, ルーイラスト, arexhibition, ルー個展' },
 
-      { hid: 'og:site_name', property: 'og:site_name', content: 'Rooo Lou Exhibiton「Room」'},
-      { hid: 'og:title', property: 'og:title', content: 'Rooo Lou Exhibiton「Room」'},
-      { hid: 'og:description', property: 'og:description', content: '3D空間、AR技術を取り入れたRooo Lou Exhibiton「Room」'},
+      { hid: 'og:site_name', property: 'og:site_name', content: 'Rooo Lou Exhibition「Room」'},
+      { hid: 'og:title', property: 'og:title', content: 'Rooo Lou Exhibition「Room」'},
+      { hid: 'og:description', property: 'og:description', content: '3D空間、AR技術を取り入れたRooo Lou Exhibition「Room」'},
       { hid: 'og:url', property: 'og:url', content: 'https://exh-room.com/'},
       { hid: 'og:image', property: 'og:image', content: 'https://exh-room.com/og.png'},
       { hid: 'og:type', property: 'og:type', content: 'website'},
 
       { hid: 'twitter:card', name: 'twitter:card', content: 'summary_large_image'},
-      { hid: 'twitter:title', name: 'twitter:title', content: 'Rooo Lou Exhibiton「Room」'},
-      { hid: 'twitter:description', name: 'twitter:description', content: '3D空間、AR技術を取り入れたRooo Lou Exhibiton「Room」'},
+      { hid: 'twitter:title', name: 'twitter:title', content: 'Rooo Lou Exhibition「Room」'},
+      { hid: 'twitter:description', name: 'twitter:description', content: '3D空間、AR技術を取り入れたRooo Lou Exhibition「Room」'},
       { hid: 'twitter:image', name: 'twitter:image', content: 'https://exh-room.com/og.png'}
     ],
     link: [
@@ -154,17 +154,17 @@ export default {
       '~': path.resolve(__dirname),
     },
   },
-  // server: {
-  //   https: {
-  //     key: fs.readFileSync(
-  //       path.resolve(
-  //         __dirname,
-  //         'server/localserver-key.pem'
-  //       )
-  //     ),
-  //     cert: fs.readFileSync(
-  //       path.resolve(__dirname, 'server/localserver.pem')
-  //     )
-  //   }
-  // }
+  server: {
+    https: {
+      key: fs.readFileSync(
+        path.resolve(
+          __dirname,
+          'server/localserver-key.pem'
+        )
+      ),
+      cert: fs.readFileSync(
+        path.resolve(__dirname, 'server/localserver.pem')
+      )
+    }
+  }
 }
