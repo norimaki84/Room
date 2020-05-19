@@ -248,6 +248,7 @@
     }
     .landscapeBox__inner--content {
       width: get-vw(356px);
+      text-align: center;
     }
     .landscapeBox__inner--icon {
       width: get-vw(187px);
