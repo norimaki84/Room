@@ -38,35 +38,6 @@ export default class CameraUtils {
     this.cameraControls.maxZoom = 3; // zoomの最大値
     this.cameraControls.moveTo(0, 150, 0, false);　// 初期カメラ位置
     this.cameraControls.saveState();
-    // this.cameraControls.setTarget( 494, 150, 300, true );
-    // this.cameraControls.dollyTo(0.0001, true);
-    // this.cameraControls.minDistance = 10;
-    // this.cameraControls.maxDistance = 50;
-
-    // this.cameraControls.addEventListener('controlstart', ()=> {
-    //   console.log('controlstart');
-    // });
-    //
-    // this.cameraControls.addEventListener('control', ()=> {
-    //   console.log('control');
-    // });
-    //
-    // this.cameraControls.addEventListener('controlend', ()=> {
-    //   console.log('controlend');
-    // });
-
-    // this.cameraControls.addEventListener('update', ()=> {
-    //   console.log('update');
-    // });
-    //
-    // this.cameraControls.addEventListener('awake', ()=> {
-    //   console.log('awake');
-    // });
-    //
-    // this.cameraControls.addEventListener('sleep', ()=> {
-    //   console.log('sleep');
-    // });
-    // =================
 
   }
 
