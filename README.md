@@ -11,6 +11,7 @@ AR展示コンテンツ Rooo Lou Exhibition「Room」の開発リポジトリで
 - three v0.115.0 
 - [camera-controls v1.21.0](https://github.com/yomotsu/camera-controls) 
 - [model-viewer v0.10.0](https://github.com/google/model-viewer/tree/master/packages/model-viewer) 
+  ※model-viewerの動作保証バージョンは0.10.0
 
 ## Description
 [![Rooo Lou ( Degital ) Exhibition "Room"](http://img.youtube.com/vi/FS_ign_u3Yw/0.jpg)](http://www.youtube.com/watch?v=FS_ign_u3Yw "Rooo Lou ( Degital ) Exhibition "Room"")
