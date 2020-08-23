@@ -30,8 +30,8 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ],
     script: [
-      { src: 'https://unpkg.com/@google/model-viewer/dist/model-viewer.js', type:"module" },
-      { src: 'https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js', type:"nomodule" },
+      { src: 'https://unpkg.com/@google/model-viewer@0.10.0/dist/model-viewer.js', type:"module" },
+      { src: 'https://unpkg.com/@google/model-viewer@0.10.0/dist/model-viewer-legacy.js', type:"nomodule" },
     ]
   },
   /*
