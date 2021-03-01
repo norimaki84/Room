@@ -37,7 +37,7 @@
     "nuxt-user-agent": "^1.2.2",
     "path": "^0.12.7",
     "raw-loader": "^4.0.0",
-    "three": "^0.115.0",
+    "three": "^0.125.0",
     "vuex": "^3.1.2",
     "vuex-router-sync": "^5.0.0"
   },
