@@ -31,7 +31,7 @@
     "cross-env": "^6.0.3",
     "dat.gui": "^0.7.7",
     "gsap": "^3.0.1",
-    "nuxt": "^2.9.2",
+    "nuxt": "^3.4.3",
     "nuxt-compress": "^1.1.0",
     "nuxt-svg-loader": "^1.2.0",
     "nuxt-user-agent": "^1.2.2",
